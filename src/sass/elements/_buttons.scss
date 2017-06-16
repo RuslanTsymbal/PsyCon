@@ -48,3 +48,54 @@
 .btn-login:hover {
   background-color: $button-login-color--hover;
 }
+
+
+//sidebar
+
+.btn-sidebar {
+  width: 129px;
+  padding-top: 4px;
+  border: none;
+  color: #fff;
+  line-height: 2rem;
+  text-align: center;
+  border-radius: 3px;
+  text-transform: uppercase;
+  font-size: 11px;
+}
+
+
+// btn-offline
+
+.btn-offline {
+  background-color: #cecece;
+  border-bottom: 3px solid #b7b7b7;
+}
+
+//btn-session
+
+.btn-session {
+  background-color: #0058e9;
+  border-bottom: 3px solid #003493;
+}
+
+//btn-chat
+
+.btn-chat {
+  background-color: #0acf66;
+  border-bottom: 3px solid #05a450;
+}
+
+//btn-show
+
+.btn-show {
+  border: none;
+  background-color: #ffaa31;
+  border-bottom: 3px solid #cd6600;
+  width: 100%;
+  display: block;
+  overflow: hidden;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 1.6rem;
+}

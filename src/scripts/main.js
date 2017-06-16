@@ -10,8 +10,13 @@ $(document).ready(function() {
     cssEase: 'linear'
   });
 
+  $('.slick-dots button:first').addClass("slider-btn-active");
+
   $(".slick-dots").on("click", "button", function(){
+
     $(".slick-dots button").removeClass("slider-btn-active");
     $(this).addClass("slider-btn-active");
+
+
    });
 });
