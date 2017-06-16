@@ -1,0 +1,50 @@
+// Кнопки
+
+// .btn {
+//   display: inline-block;
+//   vertical-align: middle;
+//   background: none;
+//   outline: 0 none;
+//   border: 0 none;
+//   border-radius: 0;
+//   padding: 8px 25px;
+//   background-color: #000;
+//   text-transform: uppercase;
+//   color: #fff;
+// }
+
+
+//button
+
+.btn {
+  width: 129px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-radius: 3px;
+  transition: 0.5s;
+}
+
+.btn-sign {
+  background-color: $button-sign-color;
+  border-bottom: 2px solid #038740;
+}
+
+.btn-sign:hover {
+  background-color: $button-sign-color--hover;
+}
+
+.btn-login {
+  background-color: $button-login-color;
+  border-bottom: 2px solid #bc5d00;
+}
+
+.btn-login:hover {
+  background-color: $button-login-color--hover;
+}

@@ -1,0 +1,224 @@
+/*---------------------slick-slider--------------------------*/
+
+.slick-dots {
+    li {
+      button:before{
+        display: none;
+      }
+    }
+  }
+
+.slick-dots {
+  bottom: -40px;
+
+   li {
+    button {
+      border: 2px solid #fff;
+      border-radius: 7px;
+      width: 14px;
+      height: 14px;
+      padding: 5px;
+    }
+  }
+}
+
+.slider-btn-active {
+  background-color: #fff!important;
+  transition: 0.5s;
+}
+
+.slick-arrow {
+  display: none!important;
+}
+
+.fade {
+
+  div:nth-child(1){
+    background-image: url(../images/slider-1.jpg);
+    background-size: cover;
+    background-position: 50% 100%;
+  }
+
+  div:nth-child(2){
+    background-image: url(../images/slider-1.jpg);
+    background-size: cover;
+    background-position: 50% 100%;
+  }
+
+  div:nth-child(3){
+    background-image: url(../images/slider-1.jpg);
+    background-size: cover;
+    background-position: 50% 100%;
+  }
+
+  h2 {
+    max-width: 478px;
+    padding-top: 64px;
+    padding-left: 30px;
+    color: #666666;
+    font-family: $font-family-AvenirLT-900;
+    font-size: 3rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: 3.7rem;
+  }
+
+  span {
+    display: block;
+    padding-left: 30px;
+    line-height: 2.5rem;
+  }
+
+  span:nth-child(2) {
+    padding-top: 30px;
+    padding-bottom: 20px;
+    color: #000000;
+    font-family: $font-family-AvenirLT-900;
+    font-size: 2.4rem;
+    font-weight: 900;
+  }
+  span:nth-child(3),
+  span:nth-child(4)  {
+    color: #000000;
+    font-family: $font-family-AvenirLT-900;
+    font-size: 1.8rem;
+  }
+
+  span:nth-child(5) {
+    padding-bottom: 106px;
+    color: #000000;
+    font-family: $font-family-AvenirLT-300;
+    font-size: 1.8rem;
+    font-weight: 300;
+  }
+}
+
+/*-------------------.content-block---------------------*/
+
+.content-block {
+  float: left;
+  max-width: 831px;
+  background-color: #fff;
+  border-radius: 9px 9px 9px 9px;
+  border-top: 1px solid #cdcdcd;
+}
+
+/*-------------------content-block__header--------------------*/
+
+.content-block__header {
+  padding-top: 2rem;
+  padding-bottom: 3.8rem;
+  border-left: 1px solid #cdcdcd;
+  border-right: 1px solid #cdcdcd;
+  border-radius: 9px 9px 0 0;
+
+  h2 {
+    padding-left: 3rem;
+    padding-right: 4.9rem;
+    color: #3a3839;
+    font-family: $font-family-AvenirLT-900;
+    font-weight: bold;
+    line-height: 4.8rem;
+    text-transform: uppercase;
+  }
+
+  p {
+    padding-left: 3rem;
+    padding-right: 4.9rem;
+    font-size: 1.6rem;
+    line-height: 3rem;
+    color: #999999;
+    font-weight: 300;
+  }
+
+  span {
+    color: #666666;
+    font-weight: 900;
+  }
+}
+
+/*-------------------.content-block__article--------------------*/
+
+.content-block__article {
+  padding-top: 4.4rem;
+  padding-bottom: 4.4rem;
+  border-top: 1px solid #cdcdcd;
+  border-left: 1px solid #cdcdcd;
+  border-right: 1px solid #cdcdcd;
+  overflow: hidden;
+
+    h3 {
+      padding-left: 3rem;
+      float: left;
+      color: #666666;
+      font-family: $font-family-AvenirLT-900;
+      font-size: 1.8rem;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    p {
+      max-width: 616px;
+      display: block;
+      float: right;
+      padding-right: 4.9rem;
+      font-size: 1.6rem;
+      font-weight: 300;
+      line-height: 3rem;
+      color: #999999;
+    }
+
+    span {
+      color: #666666;
+      font-weight: 900;
+  }
+}
+
+/*--------------------.content-block___check---------------*/
+
+.content-block___check {
+    background-image: url(../images/bg-check.jpg);
+    background-size: cover;
+    background-position: 50% 100%;
+    padding-top: 20rem;
+    padding-bottom: 13rem;
+    border-radius: 0 0 9px 9px;
+    text-align: center;
+
+    span {
+      display: block;
+      color: #ffffff;
+      font-family: $font-family-AvenirLT-900;
+      font-weight: 900;
+      line-height: 3.6rem;
+      font-style: italic;
+    }
+
+    span:nth-child(1) {
+      font-size: 1.8rem;
+      line-height: 3.6rem;
+      padding-bottom: 20px;
+    }
+
+    span:nth-child(2) {
+      font-size: 1.6rem;
+      padding-bottom: 12px;
+    }
+
+    a {
+      color: #ffffff;
+      text-decoration: underline;
+      transition: 0.5s;
+    }
+
+    a:hover {
+      color: #0acf66;
+    }
+}
+
+
+/*---------------------.sidebar-block----------------------*/
+
+.sidebar-block {
+  margin-left: auto;
+  width: 50%;
+}
