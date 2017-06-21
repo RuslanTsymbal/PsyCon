@@ -800,6 +800,10 @@
       margin-bottom: 2rem;
     }
 
+    @include max-w($screen-sm) {
+      margin-bottom: 20px!important;
+    }
+
     @include max-w($screen-md) {
       margin-bottom: 0!important;
     }
