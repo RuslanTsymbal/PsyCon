@@ -22,13 +22,7 @@ body {
 }
 
 a {
-  // color: $link-color;
   text-decoration: none;
-
-  &:hover,
-  &:active {
-    // color: $link-color--hover;
-  }
 }
 
 img {
@@ -49,20 +43,39 @@ section {
 
 .my-container {
   max-width: 1280px;
-  margin-left: auto;
+  margin: 0 auto;
   overflow: hidden;
 }
 
 .wrapper-content {
   overflow: hidden;
   padding-top: 55px;
+
+  @include max-w($screen-md) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  @include max-w(1280px) {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  @include max-w($screen-md) {
+    padding-right: 15px!important;
+    padding-left: 15px!important;
+  }
 }
 
 .wrapper {
   background-image: url(../images/bg.jpg);
-  background-size: inherit;
+  background-size: cover;
   background-position: 50% 100%;
-  padding-bottom: 13rem;
+  padding-bottom: 5rem;
+
+   @include max-w($screen-md) {
+    padding-bottom: 5rem;
+  }
 }
 
 .icon {

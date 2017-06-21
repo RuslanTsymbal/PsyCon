@@ -4,7 +4,6 @@ input[type='text'],
 input[type='email'],
 input[type='tel'],
 input[type='url'],
-input[type='search'],
 input[type='password'],
 textarea,
 select {
@@ -19,3 +18,24 @@ select {
   margin-top: 8px;
   margin-bottom: 12px;
 }
+
+input[type='search'] {
+  max-width: 200px;
+  background: none;
+  outline: 0 none;
+  border: none;
+  padding-bottom: 6px;
+  float: left;
+  font-family: $font-family-AvenirLT-900;
+  color: #cc6600;
+  font-size: 1.2rem;
+  line-height: 2.5rem;
+}
+
+//color placeholder
+
+::-webkit-input-placeholder {color: #cc6600;}
+::-moz-placeholder          {color: #cc6600;}/* Firefox 19+ */
+:-moz-placeholder           {color: #cc6600;}/* Firefox 18- */
+:-ms-input-placeholder      {color: #cc6600;}
+

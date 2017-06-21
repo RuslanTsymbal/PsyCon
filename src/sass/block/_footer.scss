@@ -1,7 +1,32 @@
 .page-footer {
 	background-color: #3a3839;
-  padding-top: 50px;
-  padding-bottom: 44px;
+  padding-top: 46px;
+  padding-bottom: 40px;
+
+  @include max-w($screen-md) {
+    padding-bottom: 20px;
+    padding-top: 38px;
+  }
+
+  @include max-w($screen-sm) {
+    padding-bottom: 30px;
+  }
+
+  @include max-w($screen-xs) {
+    padding-top: 32px;
+  }
+
+  .page-container {
+    position: relative;
+  }
+
+  .my-container {
+
+    @include max-w(1280px) {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
 }
 
 .footer-nav {
@@ -9,12 +34,35 @@
   overflow: hidden;
   float: left;
 
+  @include max-w(1336px) {
+    max-width: 500px;
+    padding-left: 20px;
+  }
+
+  @include max-w(1280px) {
+    max-width: 520px!important;
+    padding-left: 40px!important;
+  }
+
+  @include max-w($screen-xl) {
+    padding-left: 0!important;
+  }
+
+  @include max-w($screen-sm) {
+    float: none;
+  }
+
   ul {
 
     li {
       float:left;
       display:inline;
       width:33.333%;
+
+      @include max-w($screen-sm) {
+        width: 50%;
+      }
+
       a {
         color: #ffffff;
         font-size: 1.4rem;
@@ -26,6 +74,17 @@
         color: #ffa934;
       }
     }
+
+    li:nth-child(even) {
+
+      @include max-w($screen-sm) {
+        padding-left: 26%;
+      }
+
+      @include max-w($screen-xs) {
+        padding-left: 12%;
+      }
+    }
   }
 }
 
@@ -33,27 +92,32 @@
   text-align: right;
   margin-bottom: 13px;
 
+  @include max-w($screen-md) {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+
+  @include max-w($screen-sm) {
+    padding-top: 14px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  @include max-w($screen-xs) {
+    display: none;
+  }
+
   a {
     display: inline-block;
     margin-left: 7px;
-  }
 
-  &__cell:nth-child(1) {
-    width: 120px;
-    height: 34px;
-    background: url(../images/spritesheet.png) 0 -36px no-repeat;
-  }
-
-  &__cell:nth-child(2) {
-    width: 74px;
-    height: 34px;
-    background: url(../images/spritesheet.png) 0 -72px no-repeat;
-  }
-
-  &__cell:nth-child(3) {
-    width: 135px;
-    height: 34px;
-    background: url(../images/spritesheet.png) 0 0 no-repeat;
+    @include max-w($screen-md) {
+      display: block;
+      margin-bottom: 10px;
+    }
   }
 }
 
@@ -66,5 +130,100 @@
     color: #cccccc;
     font-size: 1.2rem;
     line-height: 1.7rem;
+  }
+}
+
+.footer-copyright {
+   overflow: hidden;
+  text-align: right;
+  color: #cccccc;
+  font-size: 1.2rem;
+  line-height: 1.7rem;
+
+   @include max-w($screen-md) {
+      width: 100%;
+      text-align: center;
+   }
+
+  span {
+    display: block;
+  }
+}
+/*---------------------.footer-icons-mobile---------------------*/
+
+.footer-icons-mobile {
+  display: none;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  overflow: hidden;
+
+  @include max-w($screen-xs) {
+    display: block;
+  }
+
+  img {
+    display: block;
+    float: left;
+    margin-right: 11px;
+  }
+
+  img:nth-child(1) {
+    width: 98px;
+    height: 28px;
+  }
+
+  img:nth-child(2) {
+    width: 60px;
+    height: 27px;
+  }
+
+   img:nth-child(3) {
+    width: 110px;
+    height: 28px;
+    margin-right: 0;
+  }
+
+}
+/*-----------------------.go-up----------------------------*/
+
+.go-up {
+  position: absolute;
+  top: -6px;
+  left: 7%;
+
+  @include max-w(1600px) {
+    top: -6px;
+    left: 3%;
+  }
+
+  @include max-w(1440px) {
+    left: 1%!important;
+  }
+
+
+  @include max-w(1368px) {
+    top: -34px!important;
+    left: 0.5%!important;
+  }
+
+  @include max-w($screen-xl) {
+    display: none;
+  }
+
+  a {
+    display: block;
+    width: 28px;
+    height: 28px;
+    font-size: 2.1rem;
+    text-align: center;
+    color: #ffaa31;
+    border: 2px solid #ffaa31;
+    border-radius: 14px;
+    transition: 0.5s;
+  }
+
+  a:hover {
+    color: #fff;
+    border: 2px solid #fff;
   }
 }

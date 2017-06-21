@@ -1,4 +1,4 @@
-/*---------------------slick-slider--------------------------*/
+/*---------------------slick-slider (slider-top)--------------------------*/
 
 .slick-dots {
     li {
@@ -27,45 +27,100 @@
   transition: 0.5s;
 }
 
-.slick-arrow {
-  display: none!important;
-}
+.slider-top {
 
-.fade {
+  div {
+
+    @include max-w($screen-md) {
+      height: 344px;
+    }
+
+    @include max-w($screen-sm) {
+      height: 224px;
+    }
+
+    @include max-w($screen-xs) {
+      height: 272px;
+    }
+  }
 
   div:nth-child(1){
     background-image: url(../images/slider-1.jpg);
     background-size: cover;
     background-position: 50% 100%;
+
+    @include max-w($screen-xs) {
+      background-image: url(../images/slider-2.jpg);
+    }
   }
 
   div:nth-child(2){
     background-image: url(../images/slider-1.jpg);
     background-size: cover;
     background-position: 50% 100%;
+
+    @include max-w($screen-xs) {
+      background-image: url(../images/slider-2.jpg);
+    }
   }
 
   div:nth-child(3){
     background-image: url(../images/slider-1.jpg);
     background-size: cover;
     background-position: 50% 100%;
+
+    @include max-w($screen-xs) {
+      background-image: url(../images/slider-2.jpg);
+    }
   }
 
   h2 {
     max-width: 478px;
-    padding-top: 64px;
+    padding-top: 71px;
     padding-left: 30px;
     color: #666666;
     font-family: $font-family-AvenirLT-900;
     font-size: 3rem;
     text-transform: uppercase;
     line-height: 3.7rem;
+
+    @include max-w($screen-md) {
+      font-size: 2rem;
+      padding-top: 41px;
+      padding-left: 35px;
+    }
+
+    @include max-w($screen-sm) {
+      max-width: 322px;
+      padding-top: 14px;
+      line-height: 2.4rem;
+      font-size: 1.6rem;
+    }
+
+    @include max-w($screen-xs) {
+      max-width: 286px;
+      padding-left: 15px;
+    }
   }
 
   span {
     display: block;
     padding-left: 30px;
     line-height: 2.5rem;
+
+    @include max-w($screen-md) {
+      font-size: 2rem!important;
+      line-height: 3.1rem;
+    }
+
+    @include max-w($screen-sm) {
+      font-size: 1.6rem!important;
+      line-height: 2.1rem;
+    }
+
+    @include max-w($screen-xs) {
+      padding-left: 15px;
+    }
   }
 
   span:nth-child(2) {
@@ -74,6 +129,11 @@
     color: #000000;
     font-family: $font-family-AvenirLT-900;
     font-size: 2.4rem;
+
+     @include max-w($screen-md) {
+      padding-top: 18px;
+      padding-bottom: 12px;
+    }
   }
 
   span:nth-child(3),
@@ -88,15 +148,102 @@
     color: #000000;
     font-size: 1.8rem;
   }
+
+  .slick-arrow {
+    display: none!important;
+  }
 }
 
-/*-------------------.content-block---------------------*/
+.slick-dotted.slick-slider {
+
+  @include max-w($screen-md) {
+    margin-bottom: 0;
+  }
+}
+
+/*---------------------slick-slider (slider-check)--------------------------*/
+
+.slider-check {
+
+  .slick-dots {
+    display: none!important;
+  }
+
+  .slick-next {
+    right: 25px;
+
+    @include max-w($screen-xs) {
+      right: 5px;
+   }
+  }
+
+  .slick-next, .slick-prev {
+    border: 3px solid #fff;
+    border-radius: 14px;
+    font-weight: 900;
+    height: 28px;
+    width: 28px;
+    transition: 0.5s;
+  }
+
+  .slick-prev {
+    left: 25px;
+    z-index: 2;
+
+    @include max-w($screen-xs) {
+      left: 5px;
+    }
+  }
+
+  .slick-prev:before, .slick-next:before {
+    color: #fff!important;
+    padding-top: 4px;
+    padding-left: 3px;
+    opacity: 1;
+
+    @include max-w(1680px) {
+        padding-top: 6px;
+    }
+ }
+
+  .slick-next:before {
+    content: '>'!important;
+    opacity: 1;
+  }
+
+  .slick-prev:before {
+    content: '<'!important;
+    padding-left: 0;
+    transition: 0.5s;
+  }
+
+  .slick-prev:hover, .slick-next:hover {
+    border: 3px solid #ffaa31!important;
+  }
+
+  .slick-prev:hover:before, .slick-next:hover:before {
+     color: #ffaa31!important;
+  }
+}
+
+/*----------------------------.content-block-----------------------------*/
 
 .content-block {
   float: left;
   max-width: 831px;
   border-radius: 9px 9px 9px 9px;
   border-top: 1px solid #cdcdcd;
+
+  @include max-w($screen-xl) {
+    max-width: 570px;
+  }
+
+  @include max-w($screen-md) {
+    float: none;
+    margin-top: 30px;
+    max-width: 100%!important;
+    order: 2;
+  }
 }
 
 /*-------------------content-block__header--------------------*/
@@ -109,6 +256,16 @@
   border-right: 1px solid #cdcdcd;
   border-radius: 9px 9px 0 0;
 
+  @include max-w($screen-sm) {
+    padding-top: 1rem;
+    padding-bottom: 2.8rem;
+  }
+
+  @include max-w($screen-xs) {
+    padding-top: 0;
+    padding-bottom: 2rem;
+  }
+
   h2 {
     padding-left: 3rem;
     padding-right: 4.9rem;
@@ -116,6 +273,22 @@
     font-family: $font-family-AvenirLT-900;
     line-height: 4.8rem;
     text-transform: uppercase;
+
+    @include max-w($screen-xl) {
+      padding-left: 1.5rem;
+    }
+
+    @include max-w($screen-md) {
+      padding-left: 3rem!important;
+    }
+
+    @include max-w($screen-sm) {
+       padding-left: 2rem!important;
+    }
+
+    @include max-w($screen-xs) {
+      font-size: 1.6rem;
+    }
   }
 
   p {
@@ -125,6 +298,24 @@
     line-height: 3rem;
     color: #999999;
     font-weight: 300;
+
+    @include max-w($screen-md) {
+      padding-left: 3rem!important;
+    }
+
+    @include max-w($screen-sm) {
+      padding-left: 12px!important;
+      padding-right: 12px!important;
+      padding-top: 5px;
+    }
+
+    @include max-w($screen-sm) {
+      line-height: 2rem;
+    }
+
+    @include max-w($screen-xs) {
+      padding-top: 0;
+    }
   }
 
   span {
@@ -143,73 +334,178 @@
   border-left: 1px solid #cdcdcd;
   border-right: 1px solid #cdcdcd;
   overflow: hidden;
+  line-height: 2.4rem;
 
-    h3 {
-      padding-left: 3rem;
-      float: left;
-      color: #666666;
-      font-family: $font-family-AvenirLT-900;
-      font-size: 1.8rem;
-      text-transform: uppercase;
-    }
-    p {
-      max-width: 616px;
-      display: block;
-      float: right;
-      padding-right: 4.9rem;
-      font-size: 1.6rem;
-      font-weight: 300;
-      line-height: 3rem;
-      color: #999999;
+  @include max-w($screen-sm) {
+    padding-top: 2rem;
+    padding-bottom: 2.4rem;
+  }
+
+  @include max-w($screen-xs) {
+    padding-top: 1rem;
+  }
+
+  &:nth-last-child(1) {
+    border-bottom: 1px solid #cdcdcd;
+  }
+
+  h3 {
+    padding-left: 3rem;
+    float: left;
+    color: #666666;
+    font-family: $font-family-AvenirLT-900;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+
+    @include max-w($screen-xl) {
+      padding-left: 1.5rem;
     }
 
-    span {
-      color: #666666;
-      font-weight: 900;
+    @include max-w($screen-md) {
+      padding-left: 3rem!important;
+    }
+
+    @include max-w($screen-sm) {
+       padding-left: 12px!important;
+    }
+
+    @include max-w($screen-sm) {
+      font-size: 1.4rem;
+    }
+
+  }
+
+  p {
+    max-width: 74.3%;
+    display: block;
+    float: right;
+    padding-right: 3rem;
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 3rem;
+    color: #999999;
+
+    @include max-w($screen-md) {
+      max-width: 70.5%;
+      padding-right: 25px;
+    }
+
+    @include max-w($screen-sm) {
+      max-width: 100%;
+      padding-left: 12px;
+      padding-right: 12px;
+      padding-top: 15px;
+   }
+
+   @include max-w($screen-sm) {
+    line-height: 2rem;
+   }
+}
+
+  span {
+    color: #666666;
+    font-weight: 900;
+  }
+}
+
+.content-block__article:nth-child(5) {
+  border-bottom: 1px solid #cdcdcd;
+  border-radius:  0 0 10px 10px;
+}
+
+
+.show-title {
+  display: none;
+
+  @include max-w($screen-sm) {
+    display: block;
+    width: 100%;
+  }
+}
+
+.hide-title {
+
+  @include max-w($screen-sm) {
+     display: none;
   }
 }
 
 /*--------------------.content-block___check---------------*/
 
 .content-block___check {
-    background-image: url(../images/bg-check.jpg);
-    background-size: cover;
-    background-position: 50% 100%;
-    padding-top: 19rem;
-    padding-bottom: 13rem;
-    border-radius: 0 0 10px 10px;
-    border-right: none;
-    text-align: center;
-    border-bottom: 1px solid #b1b1b1;
+  background-image: url(../images/bg-check.jpg);
+  background-size: cover;
+  background-position: 50% 100%;
+  padding-top: 7.7%;
+  padding-bottom: 5.2%;
+  border-radius: 10px;
+  border-right: none;
+  text-align: center;
+  border-bottom: 1px solid #b1b1b1;
 
-    span {
-      display: block;
-      color: #ffffff;
-      font-family: $font-family-AvenirLT-900;
-      line-height: 3.6rem;
-      font-style: italic;
+  span {
+    display: block;
+    color: #ffffff;
+    font-family: $font-family-AvenirLT-900;
+    line-height: 3.6rem;
+    font-style: italic;
+  }
+
+  span:nth-child(1) {
+    font-size: 1.8rem;
+    line-height: 3.6rem;
+    padding-bottom: 20px;
+
+    @include max-w($screen-xl) {
+      width: 40%;
+      margin: 0 auto;
     }
 
-    span:nth-child(1) {
-      font-size: 1.8rem;
-      line-height: 3.6rem;
-      padding-bottom: 20px;
+    @include max-w($screen-md) {
+      width: 74%!important;
     }
 
-    span:nth-child(2) {
-      font-size: 1.6rem;
-      padding-bottom: 12px;
+    @include max-w($screen-sm) {
+      width: 53%!important;
     }
 
-    a {
-      color: #ffffff;
-      text-decoration: underline;
-      transition: 0.5s;
+    @include max-w($screen-xs) {
+      width: 80%!important;
+   }
+  }
+
+  span:nth-child(2) {
+    font-size: 1.6rem;
+    padding-bottom: 12px;
+
+    @include max-w($screen-xl) {
+      width: 65%;
+      margin: 0 auto;
     }
 
-    a:hover {
-      color: #0acf66;
+    @include max-w($screen-md) {
+      width: 74%!important;
     }
+
+    @include max-w($screen-sm) {
+      padding-top: 10px;
+    }
+
+    @include max-w($screen-xs) {
+      width: 100%!important;
+      padding-top: 69px;
+   }
+  }
+
+  a {
+    color: #ffffff;
+    text-decoration: underline;
+    transition: 0.5s;
+  }
+
+  a:hover {
+    color: #0acf66;
+  }
 }
 
 /*---------------------.readers-block----------------------*/
@@ -217,7 +513,17 @@
 .readers-block {
   max-width: 400px;
   margin-left: auto;
-  overflow: hidden;
+
+  @include max-w($screen-md) {
+    margin: 0 auto;
+    order: 1;
+  }
+
+  @include max-w($screen-sm) {
+     max-width: 100%;
+     margin-right: 0;
+     margin-left: 0;
+  }
 
   &__featured {
     margin-bottom: 20px;
@@ -242,7 +548,6 @@
     font-family: $font-family-AvenirLT-900;
     font-size: 1.6rem;
   }
-
 }
 
 .readers-wrapper {
@@ -256,7 +561,7 @@
 .readers-content {
   padding-top: 20px;
   padding-left: 20px;
-  padding-bottom: 16px;
+  padding-bottom: 14px;
   overflow: hidden;
   border-radius: 0 0 10px 10px;
 
@@ -269,10 +574,14 @@
     }
   }
 
-  &__text {
+  &__text-top {
     max-width: 205px;
     overflow: hidden;
     padding-left: 20px;
+
+    @include max-w($screen-xs) {
+      padding-left: 16px;
+    }
 
     span {
       display: block;
@@ -293,12 +602,23 @@
       font-size: 1.4rem;
       line-height: 1.8rem;
     }
+  }
 
-    span:nth-child(3),
-    span:nth-child(4) {
+   &__text-bot {
+    overflow: hidden;
+    padding-left: 20px;
+
+    @include max-w($screen-xs) {
+      width: 100%;
+      padding-left: 0;
+      padding-top: 12px;
+    }
+
+     span {
+      display: block;
       color: #ff6600;
       font-size: 1.4rem;
-      line-height: 2.2rem;
+      line-height: 2rem;
     }
   }
 }
@@ -307,9 +627,13 @@
 
 .readers-block__online {
 
-  .readers-content:nth-child(1) {
+  .readers-content {
     border-radius: 0;
     border-bottom: 1px solid #cdcdcd;
+  }
+
+  .readers-content:nth-last-child(2) {
+    border-bottom: none;
   }
 }
 
@@ -318,8 +642,38 @@
 .blog-blocks {
   max-width: 400px;
   margin-left: auto;
-  overflow: hidden;
   margin-top: 20px;
+
+   @include max-w($screen-md) {
+    max-width:100%;
+    margin-left: 0;
+    margin-top: 30px;
+    overflow: hidden;
+    order: 3;
+  }
+
+  .articles-blog {
+    margin-bottom: 20px;
+
+    @include max-w($screen-sm) {
+      max-width: 100%;
+      float: none;
+    }
+  }
+
+
+  .articles-blog__picture {
+
+    img {
+      @include max-w($screen-sm) {
+        width: 100%;
+      }
+    }
+  }
+
+  .articles-blog:nth-last-child(1) {
+    margin-bottom: 0;
+  }
 }
 
 .articles-wrapper {
@@ -329,10 +683,21 @@
 
 /*------------------------.articles-blog----------------------*/
 
+.articles-blog:nth-child(2),
+.articles-blog:nth-child(4){
+    @include max-w(768px) {
+      float: right;
+    }
+ }
+
 .articles-blog {
   border-radius: 10px;
   border: 1px solid #cccccc;
-  margin-bottom: 20px;
+
+  @include max-w($screen-md) {
+    max-width: 345px;
+    float: left;
+  }
 
   &__header {
     padding-left: 20px;
@@ -353,8 +718,8 @@
     ul {
       margin-left: 20px;
       margin-right: 20px;
-      padding-top: 15px;
-      padding-bottom: 12px;
+      padding-top: 14px;
+      padding-bottom: 14px;
       border-top: 1px solid #cccccc;
 
       li {
@@ -380,8 +745,95 @@
       border-radius: 0 0 10px 10px;
     }
   }
+
+  &__content {
+    padding-left: 20px;
+    padding-bottom: 15px;
+    color: #999999;
+    font-size: 1.6rem;
+    line-height: 3rem;
+  }
 }
 
-.articles-blog:nth-last-child(1) {
-  margin-bottom: 0;
+/*------------.my-blogs-----------*/
+
+.my-blogs {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+
+  @include max-w($screen-xl) {
+    display: block;
+    overflow: hidden;
+  }
+
+  @include max-w($screen-md) {
+    display: flex!important;
+    justify-content: space-between;
+  }
+
+  @include max-w($screen-sm) {
+   display: block!important;
+  }
+
+  .articles-blog {
+    max-width: 399px;
+
+    @include max-w($screen-xl) {
+      max-width: 100%;
+      float: none;
+    }
+
+    @include max-w($screen-md) {
+      max-width: 358px!important;
+    }
+
+    @include max-w(750px) {
+      max-width: 345px!important;
+    }
+  }
+
+  .articles-blog:nth-child(1) {
+
+    @include max-w($screen-xl) {
+      margin-bottom: 2rem;
+    }
+
+    @include max-w($screen-md) {
+      margin-bottom: 0!important;
+    }
+  }
+
+  .articles-blog:nth-child(1),
+  .articles-blog:nth-child(2) {
+
+    @include max-w($screen-sm) {
+      max-width: 450px!important;
+    }
+  }
+
+  .articles-blog__picture {
+
+    img {
+
+      @include max-w($screen-xl) {
+        width: 100%;
+      }
+    }
+  }
 }
+
+
+//IE
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+
+  .content-block___check {
+    padding-top: 19rem;
+    padding-bottom: 14rem;
+  }
+}
+
+
+

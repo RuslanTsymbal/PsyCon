@@ -1,12 +1,12 @@
 <div class="wrapper">
   <div class="page-container">
 
-    <header class="page-header">
+    <header class="page-header" id="top-page">
 
       <div class="page-header__top">
 
         <div class="logo">
-          <img src="../images/logo.png" alt="logo">
+          <img src="images/logo.png" alt="logo">
         </div>
 
         <div class="page-header__text">
@@ -17,28 +17,46 @@
           <span>1st time callers</span><span class="font-w-900"> only 99¢ </span><span>minute!</span>
         </div>
 
+        <div class="burger-menu" onclick="myFunction(this)">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </div>
+
         <div class="page-header__authorization">
           <div class="page-header__button">
             <button class="btn btn-sign" type="button">sign  up</button>
             <button class="btn btn-login" type="button">login</button>
           </div>
 
+          <form action="#" method="#">
+            <input type="search" class="search-top" placeholder="Search">
+            <button type="submit" class="btn-search"><i class="fa fa-search" aria-hidden="true"></i></button>
+          </form>
+
           <div class="page-header__social">
+            <a href="#" class="fa fa-instagram" aria-hidden="true"></a>
+            <a href="#" class="fa fa-google-plus" aria-hidden="true"></a>
+            <a href="#" class="fa fa-pinterest-p" aria-hidden="true"></a>
             <a href="#" class="fa fa-twitter" aria-hidden="true"></a>
             <a href="#" class="fa fa-facebook" aria-hidden="true"></a>
             <a href="#" class="fa fa-bold" aria-hidden="true"></a>
           </div>
-        </div>
+        </div><!-- .page-header__authorization -->
 
       </div><!-- .page-header__top -->
 
       <div class="clear"></div>
 
+      <div class="header-banner my-container">
+        <h2>Christmas sale promotion</h2>
+      </div><!-- .header-banner -->
+
       <div class="page-header__bot">
 
         <div class="my-container">
 
-          <nav>
+          <nav class="page-header__nav">
             <ul>
                <li><a href="#">home</a></li>
                <li><a href="#">register</a></li>

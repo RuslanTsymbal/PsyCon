@@ -34,6 +34,21 @@
 .btn-sign {
   background-color: $button-sign-color;
   border-bottom: 2px solid #038740;
+
+  @include max-w(1440px) {
+    width: 100px;
+  }
+
+  @include max-w(1368px) {
+    padding-top: 3px;
+    padding-bottom: 3px;
+  }
+
+  @include max-w(1280px) {
+    width: 90px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+  }
 }
 
 .btn-sign:hover {
@@ -43,6 +58,21 @@
 .btn-login {
   background-color: $button-login-color;
   border-bottom: 2px solid #bc5d00;
+
+  @include max-w(1440px) {
+    width: 100px;
+  }
+
+  @include max-w(1368px) {
+    padding-top: 3px;
+    padding-bottom: 3px;
+  }
+
+  @include max-w(1280px) {
+    width: 90px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+  }
 }
 
 .btn-login:hover {
@@ -89,6 +119,8 @@
 //btn-show
 
 .btn-show {
+  padding-top: 4px;
+  padding-bottom: 4px;
   border: none;
   background-color: #ffaa31;
   border-bottom: 3px solid #cd6600;
@@ -98,4 +130,94 @@
   border-radius: 3px;
   color: #fff;
   font-size: 1.6rem;
+  transition: 0.5s;
 }
+
+.btn-show:hover {
+  background-color: #ff9400;
+}
+
+.btn:focus {
+    outline: none;
+}
+
+
+//burger-menu
+
+.burger-menu {
+  display: none;
+  width: 33px;
+  float: right;
+
+  @include max-w($screen-md) {
+    display: block;
+    position: absolute;
+    right: 15px;
+    top: 30px;
+  }
+
+  @include max-w($screen-sm) {
+    top: 8px;
+  }
+
+  @include max-w($screen-xs) {
+  }
+
+  @include max-w($screen-xs) {
+    right: 4px;
+    top: 21px;
+  }
+}
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 6px;
+    background-color: #ffffff;
+    margin: 6px 0;
+    transition: 0.4s;
+
+    @include max-w($screen-md) {
+      height: 5px;
+    }
+
+    @include max-w($screen-xs) {
+      height: 3px;
+    }
+
+    @include max-w($screen-xs) {
+      width: 27px;
+      height: 4px;
+      margin-top: 0px;
+      margin-bottom: 7px;
+    }
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+    transform: rotate(-45deg) translate(-9px, 6px) ;
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+    transform: rotate(45deg) translate(-8px, -8px) ;
+}
+
+//btn-search
+
+.btn-search {
+  border: none;
+  color: #cc6600;
+  background: none;
+  transition: 0.5s;
+}
+
+.btn-search:hover {
+  color: #fff;
+}
+
+.btn-search:focus {
+  outline: none;
+}
+
