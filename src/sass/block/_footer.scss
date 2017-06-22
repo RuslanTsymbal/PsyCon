@@ -22,12 +22,20 @@
 
   .my-container {
 
+    @include max-w(1366px) {
+      position: relative;
+    }
+
     @include max-w(1280px) {
       padding-left: 15px;
       padding-right: 15px;
     }
   }
 }
+
+
+/*--------------------------.footer-nav--------------------------*/
+
 
 .footer-nav {
   max-width: 480px;
@@ -37,22 +45,31 @@
   @include max-w(1336px) {
     max-width: 500px;
     padding-left: 20px;
+    position: absolute;
+    top: -9px;
   }
 
   @include max-w(1280px) {
     max-width: 520px!important;
-    padding-left: 40px!important;
+    margin-left: 20px;
   }
 
   @include max-w($screen-xl) {
     padding-left: 0!important;
+    margin-left: 0!important;
   }
 
   @include max-w($screen-sm) {
     float: none;
+    position: static!important;
+  }
+
+  @include max-w(375px) {
+    padding-left: 0!important;
   }
 
   ul {
+    overflow: hidden;
 
     li {
       float:left;
@@ -81,12 +98,20 @@
         padding-left: 26%;
       }
 
+      @include max-w(375px) {
+        padding-left: 18%;
+      }
+
       @include max-w($screen-xs) {
-        padding-left: 12%;
+        padding-left: 12%!important;
       }
     }
   }
 }
+
+
+/*------------------------.footer-icons ------------------------------*/
+
 
 .footer-icons {
   text-align: right;
@@ -101,9 +126,9 @@
 
   @include max-w($screen-sm) {
     padding-top: 14px;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
+    flex-direction: row!important;
+    justify-content: space-between!important;
+    align-items: flex-start!important;
   }
 
   @include max-w($screen-xs) {
@@ -121,6 +146,10 @@
   }
 }
 
+
+/*----------------------.footer-right--------------------------*/
+
+
 .footer-right {
   overflow: hidden;
   text-align: right;
@@ -134,22 +163,25 @@
 }
 
 .footer-copyright {
-   overflow: hidden;
+  overflow: hidden;
   text-align: right;
   color: #cccccc;
   font-size: 1.2rem;
   line-height: 1.7rem;
 
    @include max-w($screen-md) {
-      width: 100%;
-      text-align: center;
+    width: 100%;
+    text-align: center;
    }
 
   span {
     display: block;
   }
 }
+
+
 /*---------------------.footer-icons-mobile---------------------*/
+
 
 .footer-icons-mobile {
   display: none;
@@ -177,14 +209,17 @@
     height: 27px;
   }
 
-   img:nth-child(3) {
+  img:nth-child(3) {
     width: 110px;
     height: 28px;
     margin-right: 0;
   }
 
 }
+
+
 /*-----------------------.go-up----------------------------*/
+
 
 .go-up {
   position: absolute;
@@ -199,7 +234,6 @@
   @include max-w(1440px) {
     left: 1%!important;
   }
-
 
   @include max-w(1368px) {
     top: -34px!important;
@@ -220,10 +254,5 @@
     border: 2px solid #ffaa31;
     border-radius: 14px;
     transition: 0.5s;
-  }
-
-  a:hover {
-    color: #fff;
-    border: 2px solid #fff;
   }
 }

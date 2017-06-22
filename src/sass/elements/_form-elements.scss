@@ -30,6 +30,10 @@ input[type='search'] {
   color: #cc6600;
   font-size: 1.2rem;
   line-height: 2.5rem;
+
+  @include max-w(1024px) {
+    max-width: 136px!important;
+  }
 }
 
 //color placeholder
