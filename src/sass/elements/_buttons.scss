@@ -1,21 +1,5 @@
 // Кнопки
 
-// .btn {
-//   display: inline-block;
-//   vertical-align: middle;
-//   background: none;
-//   outline: 0 none;
-//   border: 0 none;
-//   border-radius: 0;
-//   padding: 8px 25px;
-//   background-color: #000;
-//   text-transform: uppercase;
-//   color: #fff;
-// }
-
-
-//button
-
 .btn {
   width: 129px;
   padding-top: 4px;
@@ -148,6 +132,7 @@
   display: none;
   width: 33px;
   float: right;
+  z-index: 3;
 
   @include max-w($screen-md) {
     display: block;
@@ -204,6 +189,11 @@
     transform: rotate(45deg) translate(-8px, -8px) ;
 }
 
+.bg-bar {
+  background-color: #993300;
+}
+
+
 //btn-search
 
 .btn-search {
@@ -220,4 +210,3 @@
 .btn-search:focus {
   outline: none;
 }
-
