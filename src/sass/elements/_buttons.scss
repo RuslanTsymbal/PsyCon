@@ -210,3 +210,37 @@
 .btn-search:focus {
   outline: none;
 }
+
+
+
+
+//slider-check button
+
+.slider-check {
+
+  button {
+
+     @include max-w($screen-md) {
+      width: 129px;
+      height: 40px;
+    }
+  }
+}
+
+//btn-in-session
+
+.btn-in-session {
+  width: 100%;
+  border-radius: 3px;
+  background-color: #ff1f00;
+  border-bottom: 2px solid #c51500;
+  transition: 0.5s;
+}
+
+.btn-in-session:hover {
+  background-color: #ff0000;
+}
+
+.btn-in-session:focus {
+  outline: none;
+}

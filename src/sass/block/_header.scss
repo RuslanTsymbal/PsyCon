@@ -140,9 +140,9 @@
     float: right;
 
     @include max-w($screen-xl) {
+      max-width: 381px;
       display: block;
       padding-top: 24px;
-      float: none;
     }
 
     form {
@@ -159,6 +159,11 @@
       @include max-w(1440px) {
         margin-left: 36px;
         margin-right: 22px;
+      }
+
+      @include max-w(1280px) {
+        margin-left: 27px;
+        margin-right: 19px;
       }
 
       @include max-w($screen-xl) {

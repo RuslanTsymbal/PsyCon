@@ -167,8 +167,8 @@
 }
 
 .slick-dots {
+
   .slick-active {
-    width: 16px!important;
     height: 16px!important;
     background-color: #fff;
     border-radius: 14px;
@@ -194,7 +194,7 @@
   .slick-next {
     right: 25px;
 
-    @include max-w($screen-xs) {
+    @include max-w(480px) {
       right: 5px;
     }
   }
@@ -212,7 +212,7 @@
     left: 25px;
     z-index: 2;
 
-    @include max-w($screen-xs) {
+    @include max-w(480px) {
       left: 5px;
     }
   }
@@ -485,7 +485,7 @@
 
 
 
-.content-block___check {
+.content-block__check {
   background-image: url(../images/bg-check.jpg);
   background-size: cover;
   background-position: 50% 100%;
@@ -498,6 +498,23 @@
 
   @include max-w($screen-md) {
     border-radius: 0 0 10px 10px;
+    padding-top: 155px;
+    padding-bottom: 103px;
+  }
+
+  @include max-w($screen-xs) {
+    padding-top: 32px!important;
+    padding-bottom: 30px!important;
+  }
+
+  @include max-w($screen-sm) {
+    padding-top: 30px!important;
+    padding-bottom: 30px!important;
+  }
+
+  @include max-w(375px) {
+    padding-top: 30px!important;
+    padding-bottom: 30px!important;
   }
 
   .slick-list {
@@ -531,7 +548,10 @@
     }
 
     @include max-w(375px) {
-      width: 72%!important;
+      width: 198px!important;
+      font-size: 1.6rem;
+      line-height: 2.4rem;
+      padding-bottom: 17px;
     }
 
     @include max-w($screen-sm) {
@@ -539,7 +559,7 @@
     }
 
     @include max-w($screen-xs) {
-      width: 80%!important;
+      width: 75%!important;
     }
   }
 
@@ -566,7 +586,10 @@
     }
 
      @include max-w(375px) {
-      padding-top: 84px;
+      width: 227px !important;
+      padding-top: 0;
+      font-size: 1.4rem;
+      line-height: 2.4rem;
     }
   }
 
@@ -731,7 +754,7 @@
    @include max-w($screen-md) {
     max-width:100%;
     margin-left: 0;
-    margin-top: 30px;
+    margin-top: 20px;
     overflow: hidden;
     order: 3;
   }
@@ -905,6 +928,7 @@
     }
 
     @include max-w($screen-sm) {
+      max-width: 100% !important;
       margin-bottom: 20px!important;
     }
 
@@ -913,16 +937,10 @@
     }
   }
 
-  .articles-blog:nth-child(1) {
-
-    @include max-w($screen-sm) {
-      max-width: 100% !important;
-    }
-  }
-
   .articles-blog:nth-child(2) {
 
     @include max-w($screen-sm) {
+      margin-top: 20px;
       max-width: 100% !important;
       float: none;
     }
@@ -934,6 +952,7 @@
 
       @include max-w($screen-xl) {
         width: 100%;
+        border-bottom: 1px solid #cccccc;
       }
     }
   }
