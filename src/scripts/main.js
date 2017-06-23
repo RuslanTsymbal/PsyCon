@@ -10,12 +10,6 @@ $(document).ready(function() {
     cssEase: 'linear'
   });
 
-  $('.slick-dots button:first').addClass("slider-btn-active");
-
-  $(".slick-dots").on("click", "button", function(){
-    $(".slick-dots button").removeClass("slider-btn-active");
-    $(this).addClass("slider-btn-active");
-   });
 
   //burger-menu  hide and show
   $( ".burger-menu" ).click(function() {
@@ -23,7 +17,6 @@ $(document).ready(function() {
     $(".bar1").toggleClass('bg-bar');
     $(".bar2").toggleClass('bg-bar');
     $(".bar3").toggleClass('bg-bar');
-
 
 
     var darkBlock = $("div").is("#overlay")
@@ -54,7 +47,3 @@ $(document).ready(function() {
 function myFunction(myClass) {
   myClass.classList.toggle("change");
 }
-
-// $(".fade").on("swipeleft",function(){
-//   alert("You swiped left!");
-// });

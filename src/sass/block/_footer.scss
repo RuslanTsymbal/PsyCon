@@ -41,12 +41,12 @@
   max-width: 480px;
   overflow: hidden;
   float: left;
+  position: absolute;
+  top: -9px;
 
   @include max-w(1336px) {
     max-width: 500px;
     padding-left: 20px;
-    position: absolute;
-    top: -9px;
   }
 
   @include max-w(1280px) {
@@ -110,7 +110,10 @@
 }
 
 
+
+
 /*------------------------.footer-icons ------------------------------*/
+
 
 
 .footer-icons {
@@ -132,7 +135,7 @@
   }
 
   @include max-w($screen-xs) {
-    display: none;
+    display: none!important;
   }
 
   a {
@@ -143,11 +146,19 @@
       display: block;
       margin-bottom: 10px;
     }
+
+    @include max-w($screen-sm) {
+      margin-left: 0;
+    }
   }
 }
 
 
+
+
 /*----------------------.footer-right--------------------------*/
+
+
 
 
 .footer-right {
@@ -180,7 +191,11 @@
 }
 
 
+
+
 /*---------------------.footer-icons-mobile---------------------*/
+
+
 
 
 .footer-icons-mobile {
@@ -218,7 +233,11 @@
 }
 
 
+
+
 /*-----------------------.go-up----------------------------*/
+
+
 
 
 .go-up {
@@ -250,9 +269,14 @@
     height: 28px;
     font-size: 2.1rem;
     text-align: center;
-    color: #ffaa31;
-    border: 2px solid #ffaa31;
+    color: #fff;
+    border: 2px solid #fff;
     border-radius: 14px;
     transition: 0.5s;
+  }
+
+  a:hover {
+    color: #ffaa31;
+    border: 2px solid #ffaa31;
   }
 }

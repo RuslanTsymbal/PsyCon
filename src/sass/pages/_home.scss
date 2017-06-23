@@ -1,14 +1,5 @@
 /*---------------------slick-slider (slider-top)--------------------------*/
 
-.slick-dots {
-
-    li {
-
-      button:before {
-        display: none;
-      }
-    }
-  }
 
 .slick-dots {
   bottom: -40px;
@@ -18,21 +9,9 @@
     width: 14px;
     height: 8px;
     margin-right: 14px;
-
-    button {
-      border: 2px solid #fff;
-      border-radius: 7px;
-      width: 14px;
-      height: 14px;
-      padding: 5px;
-    }
   }
 }
 
-.slider-btn-active {
-  background-color: #fff!important;
-  transition: 0.5s;
-}
 
 .slider-top {
 
@@ -168,11 +147,43 @@
   }
 }
 
+
+.slick-dots {
+
+   li {
+    button:before {
+      border: 2px solid #fff;
+      opacity: 1;
+      border-radius: 14px;
+
+      font-size: 56px;
+      width: 16px;
+      height: 16px;
+      content: ''!important;
+      text-align: center;
+      -webkit-font-smoothing: antialiased;
+    }
+  }
+}
+
+.slick-dots {
+  .slick-active {
+    width: 16px!important;
+    height: 16px!important;
+    background-color: #fff;
+    border-radius: 14px;
+  }
+}
+
+
+
 /*---------------------slick-slider (slider-check)--------------------------*/
+
+
 
 .slider-check {
 
-  @include max-w(375px) {
+  @include max-w(768px) {
     order: 1;
   }
 
@@ -185,7 +196,7 @@
 
     @include max-w($screen-xs) {
       right: 5px;
-   }
+    }
   }
 
   .slick-next, .slick-prev {
@@ -215,7 +226,7 @@
     @include max-w(1680px) {
       padding-top: 6px;
     }
- }
+  }
 
   .slick-next:before {
     content: '>'!important;
@@ -237,7 +248,11 @@
   }
 }
 
+
+
 /*----------------------------.content-block-----------------------------*/
+
+
 
 .content-block {
   float: left;
@@ -270,7 +285,9 @@
 }
 
 
+
 /*-------------------content-block__header--------------------*/
+
 
 .content-block__header {
   padding-top: 2rem;
@@ -350,7 +367,9 @@
 }
 
 
+
 /*-------------------.content-block__article--------------------*/
+
 
 
 .content-block__article {
@@ -439,7 +458,7 @@
   border-bottom: 1px solid #cdcdcd;
   border-radius:  0 0 10px 10px;
 
-  @include max-w(375px) {
+  @include max-w($screen-md) {
     border-radius: 0;
   }
 }
@@ -461,7 +480,9 @@
 }
 
 
+
 /*--------------------.content-block___check----------------------*/
+
 
 
 .content-block___check {
@@ -475,7 +496,7 @@
   text-align: center;
   border-bottom: 1px solid #b1b1b1;
 
-  @include max-w(375px) {
+  @include max-w($screen-md) {
     border-radius: 0 0 10px 10px;
   }
 
@@ -509,13 +530,17 @@
       width: 74%!important;
     }
 
+    @include max-w(375px) {
+      width: 72%!important;
+    }
+
     @include max-w($screen-sm) {
       width: 53%!important;
     }
 
     @include max-w($screen-xs) {
       width: 80%!important;
-   }
+    }
   }
 
   span:nth-child(2) {
@@ -539,6 +564,10 @@
       width: 100%!important;
       padding-top: 69px;
     }
+
+     @include max-w(375px) {
+      padding-top: 84px;
+    }
   }
 
   a {
@@ -553,7 +582,9 @@
 }
 
 
+
 /*---------------------.readers-block----------------------*/
+
 
 
 .readers-block {
@@ -671,7 +702,9 @@
 
 
 
+
 /*-----------------------.readers-block__online---------------------*/
+
 
 
 .readers-block__online {
@@ -734,7 +767,9 @@
 
 
 
+
 /*------------------------.articles-blog----------------------*/
+
 
 
 .articles-blog:nth-child(2),
@@ -749,7 +784,7 @@
   border: 1px solid #cccccc;
 
   @include max-w($screen-md) {
-    max-width: 345px;
+    max-width: 49%;
     float: left;
   }
 
@@ -817,7 +852,7 @@
 
 .wrapper-my-blogs {
 
-  @include max-w(375px) {
+  @include max-w(768px) {
     display: flex;
     flex-direction: column;
   }
@@ -838,6 +873,8 @@
   @include max-w($screen-md) {
     display: flex!important;
     justify-content: space-between;
+    margin-bottom: 0;
+    order: 2;
   }
 
   @include max-w($screen-sm) {
@@ -845,7 +882,6 @@
   }
 
   @include max-w(375px) {
-    order: 2;
     margin-bottom: 0;
   }
 
@@ -858,11 +894,7 @@
     }
 
     @include max-w($screen-md) {
-      max-width: 358px!important;
-    }
-
-    @include max-w(750px) {
-      max-width: 345px!important;
+      max-width: 49%!important;
     }
   }
 
@@ -884,19 +916,17 @@
   .articles-blog:nth-child(1) {
 
     @include max-w($screen-sm) {
-      max-width: 450px!important;
+      max-width: 100% !important;
     }
   }
 
   .articles-blog:nth-child(2) {
 
     @include max-w($screen-sm) {
-      max-width: 450px!important;
+      max-width: 100% !important;
       float: none;
     }
   }
-
-
 
   .articles-blog__picture {
 
@@ -908,6 +938,11 @@
     }
   }
 }
+
+
+
+
+
 
 
 //IE
