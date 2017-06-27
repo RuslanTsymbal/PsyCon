@@ -4,13 +4,14 @@
     padding-top: 20px;
   }
 
-  @include max-w($screen-xl) {
-    padding-top: 10px;
+  @include max-w(1280px) {
+    padding-top: 0;
   }
 
-  @include max-w($screen-xs) {
+  @include max-w(768px) {
     padding-right: 0;
     padding-left: 0;
+    padding-top: 10px!important;
   }
 
   .logo {
@@ -57,7 +58,7 @@
     }
 
     @include max-w(1600px) {
-      margin-left: 30px;
+      margin-left: 20px!important;
     }
 
     @include max-w(1440px) {
@@ -73,20 +74,20 @@
     }
 
      @include max-w(1280px) {
-      max-width: 360px;
-      margin-left: 26px;
-      font-size: 1.6rem;
+      max-width: 350px!important;
+      margin-left: 26px!important;
+      font-size: 1.6rem!important;
     }
 
     @include max-w($screen-xl) {
-      max-width: 322px;
+      max-width: 322px!important;
       margin-left: 33px!important;
-      font-size: 1.5rem;
+      font-size: 1.5rem!important;
     }
 
     @include max-w($screen-md) {
       max-width: 368px!important;
-      padding-left: 20px;
+      padding-left: 0px!important;
       padding-top: 0!important;
     }
 
@@ -139,10 +140,15 @@
     justify-content: space-between;
     float: right;
 
+    @include max-w(1280px) {
+      max-width: 619px;
+      padding-top: 34px;
+    }
+
     @include max-w($screen-xl) {
-      max-width: 381px;
+      width: 404px!important;
       display: block;
-      padding-top: 24px;
+      padding-top: 24px!important;
     }
 
     form {
@@ -162,8 +168,8 @@
       }
 
       @include max-w(1280px) {
-        margin-left: 27px;
-        margin-right: 19px;
+        margin-left: 26px!important;
+        margin-right: 18px!important;
       }
 
       @include max-w($screen-xl) {
@@ -194,7 +200,7 @@
     }
 
     @include max-w(1280px) {
-      max-width: 198px;
+      max-width: 198px!important;
       padding-top: 7px;
     }
 

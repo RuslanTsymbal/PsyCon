@@ -33,6 +33,10 @@
     padding-top: 1px;
     padding-bottom: 1px;
   }
+
+  @include max-w($screen-xl) {
+     margin-right: 14px;
+  }
 }
 
 .btn-sign:hover {
@@ -146,8 +150,12 @@
   }
 
   @include max-w(375px) {
-    right: 4px!important;
+    right: 10px!important;
     top: 8px!important;
+  }
+
+   @include max-w(320px) {
+    right: 4px!important;
   }
 }
 
@@ -170,6 +178,7 @@
       width: 27px;
       height: 4px;
       margin-top: 0px;
+      margin-bottom: 7px;
     }
 }
 

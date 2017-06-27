@@ -28,6 +28,7 @@
   }
 
   &__right {
+    height: 1890px;
     max-width: 66%;
     background-color: #fff;
     border-radius: 10px;
@@ -42,7 +43,7 @@
     }
 
     @include max-w(1280px) {
-      max-width: 64.5%!important;
+      max-width: 64.5%;
       right: 15px;
     }
 
@@ -52,6 +53,14 @@
       right: 0!important;
       position: relative;
       top: 40px;
+    }
+
+    @include max-w(1024px) {
+     height: auto;
+    }
+
+    @include max-w(375px) {
+       padding-bottom: 20px;
     }
   }
 }
@@ -68,16 +77,18 @@
   border-radius: 10px;
 
   @include max-w($screen-xl) {
-    margin-top: 100px;
-  }
-
-  @include max-w($screen-md) {
-     margin-top: 92px!important;
+     margin-top: 62px!important;
   }
 
   &__element {
     padding-left: 20px;
     padding-right: 32px;
+
+    @include max-w(375px) {
+      padding-left: 12px;
+      padding-right: 6px;
+    }
+
 
     h3 {
       padding-top: 11px;
@@ -86,6 +97,11 @@
       color: #3a3839;
       font-size: 1.6rem;
       font-weight: 900;
+
+      @include max-w(375px) {
+        height: 28px;
+        padding-top: 5px
+      }
     }
 
     p {
@@ -93,6 +109,10 @@
       font-size: 1.6rem;
       font-weight: 300;
       font-style: italic;
+
+      @include max-w(375px) {
+        line-height: 1.6rem;
+      }
     }
 
     span {
@@ -103,6 +123,22 @@
       font-size: 14px;
       font-weight: 300;
       border-bottom: 1px solid #cdcdcd;
+
+      @include max-w(375px) {
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+    }
+
+  }
+
+  &__element:nth-child(3) {
+
+    span {
+
+      @include max-w(480px) {
+       border-bottom: none;
+      }
     }
   }
 }
@@ -113,6 +149,10 @@
   border-bottom: 1px solid #cdcdcd;
   padding-bottom: 8.5rem;
   border-radius: 0 0 10px 10px;
+
+  @include max-w(480px) {
+    padding-bottom: 0;
+  }
 }
 
 /*-------------------.reader-status-blok---------------------------*/
@@ -246,8 +286,8 @@
       }
 
       @include max-w(375px) {
-        font-size: 1.6rem;
-        line-height: 0;
+        font-size: 1.6rem!important;
+        line-height: 0rem;
         padding-bottom: 21px!important;
       }
     }
@@ -271,27 +311,12 @@
     border-right: none;
     border-left: none;
 
-    @include min-w(1920px) {
-      padding-top: 3.47rem;
-      padding-bottom: 3.47rem;
+    @include max-w(1680px) {
+      padding-top: 2.17rem;
+      padding-bottom: 2.17rem;
     }
 
-    @include min-w(1680px) {
-      padding-top: 3.46rem;
-      padding-bottom: 3.46rem;
-    }
-
-    @include min-w(1600px) {
-      padding-top: 3.46rem;
-      padding-bottom: 3.46rem;
-    }
-
-    @include min-w(1440px) {
-      padding-top: 3.77rem;
-      padding-bottom: 3.77rem;
-    }
-
-    @include min-w(1280px) {
+    @include max-w(1280px) {
       padding-top: 3.17rem;
       padding-bottom: 3.17rem;
     }
@@ -343,6 +368,14 @@
           font-size: 1.4rem;
         }
       }
+
+      span {
+
+        @include max-w(375px) {
+          font-size: 14px;
+          line-height: 1.7rem;
+        }
+      }
     }
   }
 
@@ -375,6 +408,11 @@
       @include max-w($screen-md) {
         padding-bottom: 1.9rem;
       }
+
+      @include max-w($screen-xs) {
+        padding-bottom: 1.3rem;
+      }
+
     }
 
     p:nth-child(3) {
@@ -394,22 +432,51 @@
         padding-top: 3.1rem;
       }
 
-      span {
+      @include max-w(375px) {
+        padding-top:1.6rem!important;
+      }
+    }
+
+    span {
+      display: block;
+      color: #666666;
+      font-style: normal;
+    }
+
+    span:nth-child(1) {
+
+      @include max-w(375px) {
         display: inline-block;
-        color: #666666;
-        font-style: normal;
+      }
+    }
+
+    span:nth-child(2) {
+      color: #ff6600;
+
+      @include max-w(375px) {
+        margin-top: -6px;
+        display: block;
       }
     }
   }
+
 
   .content-block__article:nth-child(5) {
 
     span:nth-child(1) {
       padding-bottom: 30px;
+
+      @include max-w(375px) {
+        padding-bottom: 18px;
+      }
     }
 
     span:nth-child(4) {
       padding-bottom: 29px;
+
+      @include max-w(375px) {
+        padding-bottom: 18px;
+      }
     }
 
     p {
@@ -417,6 +484,24 @@
 
       @include max-w($screen-md) {
         max-width: 72%;
+      }
+
+      @include max-w(375px) {
+        max-width: 100%!important;
+      }
+
+      span {
+        text-transform: capitalize;
+      }
+    }
+  }
+
+   .content-block__article:nth-child(6) {
+
+    span:nth-child(1) {
+
+      @include max-w(375px) {
+        display: inline-block;
       }
     }
   }
@@ -430,7 +515,7 @@
   margin-left: auto;
   padding-right: 3rem;
 
-  @include max-w($screen-md) {
+  @include max-w(1024px) {
     max-width: 620px;
     padding-right: 0;
     margin: 0 auto;
