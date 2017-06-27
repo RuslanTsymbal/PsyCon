@@ -145,12 +145,9 @@
     top: 8px;
   }
 
-  @include max-w($screen-xs) {
-  }
-
-  @include max-w($screen-xs) {
-    right: 4px;
-    top: 21px;
+  @include max-w(375px) {
+    right: 4px!important;
+    top: 8px!important;
   }
 }
 
@@ -173,7 +170,6 @@
       width: 27px;
       height: 4px;
       margin-top: 0px;
-      margin-bottom: 7px;
     }
 }
 
@@ -241,6 +237,58 @@
   background-color: #ff0000;
 }
 
-.btn-in-session:focus {
+button:focus {
   outline: none;
+}
+
+
+
+//more-info__buttons
+
+.more-info__buttons {
+
+  button {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 5px;
+    padding-bottom: 4px;
+    border: none;
+    border-radius: 3px;
+    color: #fff;
+    text-transform: uppercase;
+    border-bottom: 2px solid #b7b7b7;
+    background-color: #cecece;
+    transition: 0.5s;
+  }
+
+  button:hover {
+    background-color: #ffaa31;
+    border-bottom: 2px solid #cd6600;
+  }
+
+  button:nth-child(1) {
+    width: 184px;
+
+    @include max-w($screen-sm) {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+
+   button:nth-child(2) {
+    width: 229px;
+
+    @include max-w($screen-sm) {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+
+  button:nth-child(3) {
+    width: 137px;
+
+    @include max-w($screen-sm) {
+      width: 100%;
+    }
+  }
 }

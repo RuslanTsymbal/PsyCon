@@ -1,16 +1,58 @@
 .profile-content {
   padding-top: 50px;
-  // display: flex;
-  // justify-content: space-between;
+  position: relative;
+
+  @include max-w(1280px) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  @include max-w($screen-xl) {
+    display: flex;
+    ustify-content: flex-start;
+    flex-direction: column;
+    padding-top: 4rem;
+  }
+
+  @include max-w($screen-md) {
+    padding-top: 2rem!important;
+  }
 
   &__left {
     max-width: 399px;
+
+    @include max-w($screen-xl) {
+      order: 3;
+      max-width: 100%;
+    }
   }
 
   &__right {
-    max-width: 831px;
+    max-width: 66%;
     background-color: #fff;
     border-radius: 10px;
+    padding-bottom: 5rem;
+    position: absolute;
+    right: 0;
+    top: 50px;
+    border: 1px solid #cdcdcd;
+
+    @include max-w(1440px) {
+      max-width: 67%;
+    }
+
+    @include max-w(1280px) {
+      max-width: 64.5%!important;
+      right: 15px;
+    }
+
+    @include max-w($screen-xl) {
+      max-width: 100%!important;
+      order: 2;
+      right: 0!important;
+      position: relative;
+      top: 40px;
+    }
   }
 }
 
@@ -22,9 +64,16 @@
 
 .testimonials-block {
   margin-top: 20px;
-  padding-bottom: 8.6rem;
   background-color: #fff;
   border-radius: 10px;
+
+  @include max-w($screen-xl) {
+    margin-top: 100px;
+  }
+
+  @include max-w($screen-md) {
+     margin-top: 92px!important;
+  }
 
   &__element {
     padding-left: 20px;
@@ -58,20 +107,59 @@
   }
 }
 
-
+.elements-wrapper {
+  border-right: 1px solid #cdcdcd;
+  border-left: 1px solid #cdcdcd;
+  border-bottom: 1px solid #cdcdcd;
+  padding-bottom: 8.5rem;
+  border-radius: 0 0 10px 10px;
+}
 
 /*-------------------.reader-status-blok---------------------------*/
 
 
 
 .reader-status-blok {
-
   max-width: 399px;
+
+  @include max-w($screen-xl) {
+    order: 1;
+    margin: 0 auto;
+  }
 
   .readers-wrapper {
 
     .readers-content {
       padding-right: 20px;
+      padding-bottom: 15px;
+
+      @include max-w(375px) {
+        padding-top: 18px;
+        padding-right: 11px;
+        padding-left: 13px;
+        padding-bottom: 12px;
+      }
+
+      .readers-content__img {
+        width: 150px;
+        height: 150px;
+
+        @include max-w(375px) {
+          width: 100px;
+          height: 100px;
+        }
+
+        img {
+          width: 150px;
+          height: 150px;
+          margin-bottom: 0;
+
+          @include max-w(375px) {
+            width: 100px;
+            height: 100px;
+          }
+        }
+      }
 
       .readers-content__text-top {
         max-width: 100%;
@@ -88,6 +176,10 @@
           padding-bottom: 2px;
           color: #383537;
           font-family: $font-family-AvenirLT-900;
+
+          @include max-w(375px) {
+            padding-top: 5px;
+          }
         }
 
         span:nth-child(3) {
@@ -98,6 +190,10 @@
           padding-top: 17px;
           font-weight: 300;
           text-transform: uppercase;
+
+          @include max-w(375px) {
+            padding-top: 0;
+          }
         }
       }
     }
@@ -115,12 +211,24 @@
    &__header {
     font-family: $font-family-AvenirLT-900;
     padding-left: 30px;
-    padding-top: 22px;
+    padding-top: 23px;
     padding-bottom: 55px;
-    border-top: 1px solid #cdcdcd;
-    border-left: 1px solid #cdcdcd;
-    border-right: 1px solid #cdcdcd;
     border-radius: 10px 10px 0 0;
+
+    @include max-w($screen-md) {
+      padding-bottom: 30px;
+      padding-top: 30px;
+    }
+
+    @include max-w($screen-sm) {
+      padding-right: 12px;
+      padding-left: 12px;
+    }
+
+    @include max-w(375px) {
+      padding-top: 25px!important;
+      padding-bottom: 20px!important;
+    }
 
     h2 {
       padding-bottom: 24px;
@@ -128,12 +236,213 @@
       font-size: 3rem;
       line-height: 4.8rem;
       text-transform: uppercase;
+
+      @include max-w($screen-md) {
+        padding-bottom: 2px;
+      }
+
+      @include max-w($screen-sm) {
+        font-size: 2.6rem;
+      }
+
+      @include max-w(375px) {
+        font-size: 1.6rem;
+        line-height: 0;
+        padding-bottom: 21px!important;
+      }
     }
 
     span {
       color: #666666;
       font-size: 1.6rem;
       line-height: 3rem;
+
+      @include max-w(375px) {
+        font-size: 1.4rem;
+        display: block;
+        line-height: 1.8rem;
+      }
     }
   }
+
+  .content-block__article {
+    padding-top: 3.87rem;
+    padding-bottom: 3.7rem;
+    border-right: none;
+    border-left: none;
+
+    @include min-w(1920px) {
+      padding-top: 3.47rem;
+      padding-bottom: 3.47rem;
+    }
+
+    @include min-w(1680px) {
+      padding-top: 3.46rem;
+      padding-bottom: 3.46rem;
+    }
+
+    @include min-w(1600px) {
+      padding-top: 3.46rem;
+      padding-bottom: 3.46rem;
+    }
+
+    @include min-w(1440px) {
+      padding-top: 3.77rem;
+      padding-bottom: 3.77rem;
+    }
+
+    @include min-w(1280px) {
+      padding-top: 3.17rem;
+      padding-bottom: 3.17rem;
+    }
+
+    @include max-w($screen-md) {
+      max-width: 100%;
+      padding-right: 10px;
+      padding-top: 4.4rem;
+      padding-bottom: 4.4rem;
+    }
+
+    @include max-w(375px) {
+      padding-top: 19px!important;
+      padding-bottom: 19px!important;
+    }
+
+    h3 {
+
+      @include max-w($screen-xl) {
+        padding-left: 30px;
+      }
+
+      @include max-w($screen-sm) {
+        padding-bottom: 15px;
+        padding-left: 0!important;
+      }
+
+      @include max-w(375px) {
+        padding-bottom: 8px!important;
+      }
+   }
+
+    .content-block__content {
+
+      @include max-w($screen-md) {
+        padding-right: 0;
+        max-width: 76%;
+      }
+
+      @include max-w($screen-sm) {
+        max-width: 100%!important;
+        float: none;
+      }
+
+      p {
+
+        @include max-w(375px) {
+          line-height: 1.7rem;
+          font-size: 1.4rem;
+        }
+      }
+    }
+  }
+
+
+  .content-block__article:nth-child(2) {
+
+   .hide-title {
+      @include max-w($screen-md) {
+        display: none;
+      }
+    }
+
+    .show-title-2 {
+      @include max-w($screen-md) {
+        display: block;
+      }
+
+      @include max-w($screen-sm) {
+        display: none!important;
+      }
+    }
+  }
+
+
+  .content-block__article:nth-child(3) {
+
+    p {
+      padding-bottom: 21px;
+
+      @include max-w($screen-md) {
+        padding-bottom: 1.9rem;
+      }
+    }
+
+    p:nth-child(3) {
+      padding-bottom: 0;
+    }
+  }
+
+  .content-block__article:nth-child(4) {
+
+    p {
+      max-width: 100%;
+      padding-right: 0;
+      padding-top: 33px;
+      font-style: italic;
+
+      @include max-w($screen-md) {
+        padding-top: 3.1rem;
+      }
+
+      span {
+        display: inline-block;
+        color: #666666;
+        font-style: normal;
+      }
+    }
+  }
+
+  .content-block__article:nth-child(5) {
+
+    span:nth-child(1) {
+      padding-bottom: 30px;
+    }
+
+    span:nth-child(4) {
+      padding-bottom: 29px;
+    }
+
+    p {
+      max-width: 64%;
+
+      @include max-w($screen-md) {
+        max-width: 72%;
+      }
+    }
+  }
+}
+
+.more-info__buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 74.3%;
+  margin-left: auto;
+  padding-right: 3rem;
+
+  @include max-w($screen-md) {
+    max-width: 620px;
+    padding-right: 0;
+    margin: 0 auto;
+  }
+
+  @include max-w($screen-sm) {
+    display: block;
+    padding-left: 20px;
+    padding-right: 20px!important;
+  }
+}
+
+.show-title-2 {
+  display: none;
 }
