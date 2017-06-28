@@ -116,6 +116,19 @@ section {
   text-transform: uppercase;
 }
 
+.hide-if-768 {
+
+  @include max-w(768px) {
+    display: none;
+  }
+}
+
+.margin-t-20 {
+  margin-top: 20px;
+}
+
+
+
 ul {
   margin: 0;
   padding: 0;

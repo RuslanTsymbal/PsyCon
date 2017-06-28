@@ -17,9 +17,9 @@ const browserSync = require('browser-sync').create();
 // Settings
 let postCssSettings = [
   autoprefixer({browsers: ['last 2 version']}),
-  mqpacker({
-    sort: true
-  })
+  // mqpacker({
+  //   sort: true
+  // })
 ];
 
 // Tasks

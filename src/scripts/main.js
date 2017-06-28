@@ -11,6 +11,8 @@ $(document).ready(function() {
   });
 
 
+   var status = false;
+
   //burger-menu  hide and show
   $( ".burger-menu" ).click(function() {
     $( ".page-header__nav" ).toggle();
@@ -18,12 +20,14 @@ $(document).ready(function() {
     $(".bar2").toggleClass('bg-bar');
     $(".bar3").toggleClass('bg-bar');
 
-
-    var darkBlock = $("div").is("#overlay")
+// debugger;
+    var darkBlock = $("div").is("#overlay");
+    var t = status;
 
     if (darkBlock) {
       $("#overlay").remove();
     } else {
+
       var docHeight = $(document).height();
       $("body").append("<div id='overlay'></div>");
       $("#overlay")
@@ -39,6 +43,21 @@ $(document).ready(function() {
           });
     }
   });
+
+    $(document).mouseup(function (e) {
+      // debugger;
+    var darkBlock = $("div").is("#overlay");
+
+    if(darkBlock) {
+      status = true;
+    }
+
+    var container = $(".page-header__nav");
+    if (container.has(e.target).length === 0){
+      container.hide("slow");
+      // $("#overlay").remove();
+    }
+ });
 });
 
 

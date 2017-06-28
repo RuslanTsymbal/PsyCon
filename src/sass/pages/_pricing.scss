@@ -1,0 +1,561 @@
+.pricing-container {
+
+  @include max-w(1280px) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  @include max-w($screen-xl) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .readers-block {
+    @include max-w($screen-xl) {
+      order: 1;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+
+
+
+/*---------------------------------.approval------------------------------*/
+
+
+
+.approval {
+  width: 65%;
+  border: 1px solid #b0b0b0;
+  background-color: #fff;
+  float: left;
+  border-radius: 10px;
+
+  @include max-w(1280px) {
+    width: 66.5%;
+  }
+
+  @include max-w($screen-xl) {
+    order: 2;
+    width: 100%;
+  }
+
+  &__header {
+    padding-top: 4rem;
+    padding-bottom: 33px;
+    padding-left: 30px;
+    padding-right: 30px;
+
+    @include max-w($screen-md) {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+    h2 {
+      padding-bottom: 10px;
+      color: #3a3839;
+      line-height: 1.8rem;
+      font-size: 30px;
+      text-transform: uppercase;
+      font-family: $font-family-AvenirLT-900;
+
+      @include max-w(375px) {
+        font-size: 24px;
+      }
+    }
+
+    span {
+      color: #666666;
+      font-size: 1.8rem;
+      font-family: $font-family-AvenirLT-900;
+      text-transform: uppercase;
+
+      @include max-w(375px) {
+        padding-top: 5px;
+        font-size: 1.5rem;
+        line-height: 19px;
+        display: block;
+      }
+    }
+  }
+}
+
+
+
+/*-----------------------.chat-pricing--------------------------------*/
+
+
+
+.chat-pricing {
+  padding-top: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  border-bottom: 1px solid #b0b0b0;
+
+  @include max-w($screen-md) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  h3 {
+    color: #999999;
+    font-family: $font-family-AvenirLT-900;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 1.8rem;
+
+    @include max-w(375px) {
+      font-size: 25px;
+    }
+  }
+
+  .chat-pricing-top {
+    padding-top: 68px;
+    display: flex;
+    justify-content: space-between;
+
+    @include max-w($screen-md) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .chat-pricing-cell {
+
+      @include max-w($screen-md) {
+        margin-bottom: 90px;
+      }
+
+      .chat-pricing-cell__content span:nth-child(1):before {
+
+        @include max-w(375px) {
+          left: 98px;
+        }
+
+        @include max-w(320px) {
+          left: 73px;
+        }
+      }
+    }
+
+     .chat-pricing-cell:nth-last-child(1){
+
+      @include max-w($screen-md) {
+        margin-bottom: 100px;
+      }
+    }
+
+    .chat-pricing-cell__min {
+
+      @include max-w(375px) {
+        left: 116px;
+      }
+
+      @include max-w(320px) {
+        left: 88px;
+      }
+    }
+  }
+
+  .chat-pricing-bot {
+
+      .chat-pricing-cell {
+
+        @include max-w($screen-md) {
+          margin-bottom: 70px;
+        }
+
+        @include max-w($screen-sm) {
+          width: 200px;
+        }
+
+        @include max-w(375px) {
+          width: 100%;
+        }
+
+        .chat-pricing-cell__min {
+
+          @include max-w(480px) {
+            left: 59px;
+          }
+
+          @include max-w(375px) {
+            left: 116px;
+          }
+
+          @include max-w(320px) {
+            left: 89px;
+          }
+        }
+
+        .chat-pricing-cell__content span:nth-child(1):before {
+
+            @include max-w(480px) {
+              left: 43px;
+            }
+
+            @include max-w(375px) {
+              left: 96px;
+            }
+
+            @include max-w(320px) {
+              left: 72px;
+            }
+        }
+      }
+
+      .chat-pricing-cell:nth-last-child(1){
+
+      @include max-w($screen-md) {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .pricing__footer {
+    padding-top: 31px;
+    padding-bottom: 31px;
+  }
+}
+
+
+
+
+
+/*-----------------------------.chat-pricing-cell------------------------------*/
+
+
+
+
+
+.chat-pricing-cell {
+   width: 365px;
+   border-radius: 10px;
+   position: relative;
+
+    @include max-w(375px) {
+      width: 100%;
+    }
+
+   &__header {
+      padding-top: 45px;
+      border-radius: 10px 10px 0 0;
+      text-align: center;
+
+      span {
+        color: #ffffff;
+        font-family: $font-family-AvenirLT-900;
+        font-size: 1.6rem;
+        text-transform: uppercase;
+      }
+   }
+
+   &__content {
+    border-bottom: 1px solid #b0b0b0;
+    border-right: 1px solid #b0b0b0;
+    border-left: 1px solid #b0b0b0;
+    border-radius: 0 0 10px 10px;
+
+    span {
+      display: block;
+      text-align: center;
+    }
+
+    span:nth-child(1) {
+      color: #3a3839;
+      font-size: 36px;
+      font-weight: bold;
+      padding-top: 29px;
+      padding-bottom: 29px;
+      position: relative;
+    }
+
+    span:nth-child(1):before {
+      content: "$";
+      font-size: 22px;
+      font-weight: bold;
+      position: absolute;
+      top: 22px;
+      left: 127px;
+
+      @include max-w(375px) {
+        left: 75px;
+      }
+    }
+
+    span:nth-child(2) {
+      color: #999999;
+      font-size: 16px;
+      line-height: 30px;
+      border-top: 1px solid #b0b0b0;
+      padding-top: 11px;
+      padding-bottom: 10px;
+    }
+  }
+}
+
+
+.chat-pricing-cell__min {
+  width: 82px;
+  padding-top: 17px;
+  padding-bottom: 17px;
+  background-color: #ffffff;
+  border-radius: 42px;
+  text-align: center;
+  position: absolute;
+  top: -36px;
+  left: 142px;
+
+  @include max-w(375px) {
+    left: 90px;
+  }
+
+  span {
+    display: block;
+    color: #3a3839;
+    line-height: 23px;
+    font-family: $font-family-AvenirLT-900;
+  }
+
+  span:nth-child(1) {
+    font-size: 30px;
+  }
+
+  span:nth-child(2) {
+    font-size: 14px;
+  }
+}
+
+
+.chat-pricing-cell:nth-child(1) {
+
+    @include max-w($screen-md) {
+      margin-bottom: 70px;
+    }
+
+    @include max-w(375px) {
+      margin-bottom: 0;
+    }
+
+    .chat-pricing-cell__header {
+      background-color: #e84f5a;
+    }
+
+   .chat-pricing-cell__min {
+      border: 1px solid #e84f5a;
+  }
+}
+
+
+.chat-pricing-cell:nth-child(2) {
+    position: relative;
+
+    .chat-pricing-cell__header {
+      background-color: #3299dd;
+    }
+
+   .chat-pricing-cell__min {
+      border: 1px solid #3299dd;
+   }
+
+  .label-popular {
+    position: absolute;
+    top: 17px;
+    right: -11px;
+  }
+}
+
+
+
+
+/*---------------------------.chat-pricing-bot---------------------------*/
+
+
+
+.chat-pricing-bot {
+  padding-top: 8rem;
+  display: flex;
+  justify-content: space-between;
+
+  @include max-w($screen-sm) {
+    flex-wrap: wrap;
+    align-content: space-between;
+  }
+
+  .chat-pricing-cell {
+    width: 162px;
+
+    @include max-w(375px) {
+      width: 100%;
+    }
+
+    .chat-pricing-cell__header {
+      background-color: #0acf66;
+    }
+
+    .chat-pricing-cell__min {
+      border: 1px solid #0acf66;
+    }
+
+    .chat-pricing-cell__content span:nth-child(1):before {
+      left: 25px;
+    }
+
+    .chat-pricing-cell__content span:nth-child(2) {
+      line-height: 1rem;
+      padding-bottom: 0;
+      padding-top: 22px;
+    }
+
+    .chat-pricing-cell__content span:nth-child(3) {
+      font-weight: 900;
+      padding-bottom: 9px;
+    }
+
+    .chat-pricing-cell__min {
+      left: 40px;
+
+      @include max-w(320px) {
+        left: 90px;
+      }
+
+      @include max-w(375px) {
+        left: 90px;
+      }
+    }
+  }
+}
+
+
+
+
+/*-----------------------.pricing__footer-------------------------------------*/
+
+
+
+.pricing__footer {
+
+  span {
+    color: #666666;
+    font-family: $font-family-AvenirLT-900;;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+
+    @include max-w(375px) {
+      font-size: 1.2rem;
+      line-height: 19px;
+      display: block;
+    }
+  }
+}
+
+
+
+
+/*------------------------------.email-pricing----------------------------------*/
+
+
+
+.email-pricing {
+  padding-top: 38px;
+  padding-left: 30px;
+  padding-right: 30px;
+
+  @include max-w($screen-md) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  h3 {
+    color: #999999;
+    font-family: $font-family-AvenirLT-900;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 1.8rem;
+
+    @include max-w(375px) {
+      font-size: 25px;
+    }
+  }
+
+
+  .chat-pricing-bot {
+
+    .chat-pricing-cell {
+
+      @include max-w(480px) {
+        width: 200px;
+      }
+
+      @include max-w(375px) {
+        width: 100%;
+      }
+
+      .chat-pricing-cell__min {
+
+        @include max-w(480px) {
+          left: 59px;
+        }
+
+        @include max-w(375px) {
+          left: 116px;
+        }
+
+        @include max-w(320px) {
+          left: 89px;
+        }
+      }
+
+     .chat-pricing-cell__content span:nth-child(1):before  {
+
+        @include max-w(480px) {
+          left: 43px;
+        }
+
+        @include max-w(375px) {
+          left: 96px;
+        }
+
+        @include max-w(320px) {
+          left: 72px;
+        }
+      }
+    }
+
+    .chat-pricing-cell {
+
+      @include max-w(375px) {
+        margin-bottom: 70px;
+      }
+    }
+
+    .chat-pricing-cell:nth-last-child(1) {
+
+      @include max-w(375px) {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .pricing__footer {
+    padding-top: 34px;
+    padding-bottom: 64px;
+
+    select {
+      margin: 0;
+      padding-top: 8px;
+      padding-bottom: 8px;
+      appearance: none!important;
+      background-image: url('../../images/arrow.png');
+      background-position: right 8px center;
+      background-repeat: no-repeat;
+      border-radius: 4px;
+    }
+  }
+}
