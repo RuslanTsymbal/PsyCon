@@ -1,7 +1,15 @@
 $(document).ready(function() {
 
-  //slick-slider
+  //add class if width < 769px
+  var width = $('body').innerWidth();
+  if (width < 769) {
+      $(".page-header__nav").addClass("nav-mob");
+  } else {
+    $(".page-header__nav").removeClass("nav-mob");
+  }
 
+
+  //slick-slider
    $('.fade').slick({
     dots: true,
     infinite: true,
@@ -10,23 +18,26 @@ $(document).ready(function() {
     cssEase: 'linear'
   });
 
-
-   var status = false;
+  var statusFirst = false;
+  var statusNew = false;
 
   //burger-menu  hide and show
   $( ".burger-menu" ).click(function() {
-    $( ".page-header__nav" ).toggle();
-    $(".bar1").toggleClass('bg-bar');
-    $(".bar2").toggleClass('bg-bar');
-    $(".bar3").toggleClass('bg-bar');
 
-// debugger;
     var darkBlock = $("div").is("#overlay");
-    var t = status;
+
+    if(!statusFirst && !statusNew) {
+      $(".nav-mob" ).toggle();
+      $(".burger-menu" ).addClass("change");
+      $(".bar1").toggleClass('bg-bar');
+      $(".bar2").toggleClass('bg-bar');
+      $(".bar3").toggleClass('bg-bar');
+    }
 
     if (darkBlock) {
       $("#overlay").remove();
     } else {
+      $("html,body").css("overflow","hidden");
 
       var docHeight = $(document).height();
       $("body").append("<div id='overlay'></div>");
@@ -40,29 +51,46 @@ $(document).ready(function() {
              'background-color': 'black',
              'width': '100%',
              'z-index': 1
-          });
+        });
+    }
+
+    if(statusFirst) {
+      $("#overlay").remove();
+      statusFirst = false;
+       $("html,body").css("overflow","auto");
     }
   });
 
-    $(document).mouseup(function (e) {
-      // debugger;
+
+  $(document).mouseup(function (e) {
+
+    statusNew = false;
     var darkBlock = $("div").is("#overlay");
 
     if(darkBlock) {
-      status = true;
+     statusFirst = true;
+    } else {
+      statusFirst = false;
     }
 
-    var container = $(".page-header__nav");
+    var container = $(".nav-mob");
     if (container.has(e.target).length === 0){
       container.hide("slow");
-      // $("#overlay").remove();
+      $("#overlay").remove();
+
+    } else {
+      statusNew = true;
     }
- });
+
+    if(!statusNew) {
+
+      if(statusFirst) {
+        $(".nav-mob" ).toggle();
+        $(".burger-menu" ).removeClass("change");
+        $(".bar1").toggleClass('bg-bar');
+        $(".bar2").toggleClass('bg-bar');
+        $(".bar3").toggleClass('bg-bar');
+      }
+    }
+  });
 });
-
-
-//burger-menu  animation
-
-function myFunction(myClass) {
-  myClass.classList.toggle("change");
-}

@@ -285,6 +285,11 @@
 
   @include max-w($screen-md) {
     display: block;
+    padding-bottom: 648px;
+  }
+
+   @include max-w(375px) {
+    padding-bottom: 0;
   }
 
   .page-header__social {
@@ -320,6 +325,7 @@
 
     a:hover {
       color: #cd6600;
+      background-color: #ffa934;
     }
   }
 
@@ -328,6 +334,7 @@
     float: right;
     padding-top: 13px;
     padding-bottom: 13px;
+    padding-right: 9px;
 
     button {
       display: inline-block;
@@ -418,7 +425,12 @@
 
 /*------------------------.page-header__nav--------------------------*/
 
+.mob-nav {
 
+  @include max-w($screen-md) {
+    display: none;
+  }
+}
 
 .page-header__nav {
   padding-left: 20px;
@@ -477,6 +489,7 @@
         padding-bottom: 9px;
         padding-right: 15px;
         font-size: 1.8rem;
+        margin-bottom: 10px;
       }
 
       @include max-w($screen-sm) {
@@ -485,9 +498,17 @@
         padding-bottom: 2px;
       }
 
+      @include max-w(375px) {
+        margin-bottom: 0;
+      }
+
       a {
         color: #993300;
       }
+    }
+
+    li:nth-last-child(1) {
+      margin-bottom: 0;
     }
 
     li:hover {
@@ -498,7 +519,11 @@
   .page-header__list {
 
     @include max-w(768px) {
-      padding-top: 90px;
+      padding-top: 100px;
+    }
+
+    @include max-w(375px) {
+      padding-top: 78px;
     }
   }
 }

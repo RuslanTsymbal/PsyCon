@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Psychic Contact</title>
+	<meta name="description" content="">
+	@@include('_include/head.html')
+</head>
+
+<body>
+	@@include('_include/header.html')
+
+  <div class="my-container">
+
+    <section class="page-form">
+
+      <div class="page-form__header">
+        <h2>Email Reading Order Form</h2>
+        <p>Using this form, you will be able to place your order for an Email Reading with us.
+        All the payment information you enter on this form will be encrypted and can
+        only be read by our secure & encrypted payment gateway system.
+        Your privacy is assured.</p>
+      </div>
+
+      <div class="contact-information-block">
+        <div class="contact-information-block__header">
+          <h3>Contact Information</h3>
+            <p>Please select the type of Reading you would like
+            to have from the following  drop-down  menu.  * </p>
+        </div>
+
+        <form name="contact-information" action="#" method="#">
+
+          <div>
+            <span>Please chosse type from this menu *</span>
+            <select>
+              <option>Please chosse type from this menu</option>
+              <option value="#"></option>
+              <option value="#"></option>
+              <option value="#"></option>
+              <option value="#"></option>
+            </select>
+          </div>
+
+          <div>
+            <label for="first-name">
+              <span class="display-block">First Name *</span>
+              <span class="display-block">(Credit Card Billing First Name)</span>
+            </label>
+            <input type="text" id="first-name" name="first-name">
+          </div>
+
+          <div>
+            <label for="last-name">Last Name *</label>
+            <input type="text" id="last-name" name="last-name">
+          </div>
+
+          <div>
+            <label for="street-address-1">Street Address  ( All Address Fields- Optional) (1)</label>
+            <input type="text" id="street-address-1" name="street-address-1">
+          </div>
+
+          <div>
+            <label for="street-address-2">Street Address (2)</label>
+            <input type="text" id="street-address-2" name="street-address-2">
+          </div>
+
+          <div>
+            <label for="city">Town / City</label>
+            <input type="text" id="city" name="city">
+          </div>
+
+          <div>
+            <label for="state">State/Province</label>
+            <input type="text" id="state" name="state">
+          </div>
+
+          <div>
+            <label for="country">Country</label>
+            <input type="text" id="country" name="country">
+          </div>
+
+          <div>
+            <label for="phone-number">Phone Number</label>
+            <input type="text" id="phone-number" name="phone-number">
+          </div>
+
+          <div>
+            <label for="fax-number">Fax number (optional)</label>
+            <input type="text" id="fax-number" name="fax-number">
+          </div>
+
+          <div>
+            <label for="fax-number">Email address <span class="orange-color font-s-italic">(important!)</span> *</label>
+            <input type="text" id="email-address" name="email-address">
+          </div>
+
+          <div class="form-sex">
+            <span for="sex">Sex <span class="font-s-italic">(at time of birth)</span>*</span>
+
+              <label for="sex-male">Male</label>
+              <input type="radio" name="sex" id="sex-male" value="sex-male">
+              <label for="sex-female">Female</label>
+              <input type="radio" name="sex" id="sex-female" value="sex-female" checked>
+
+          </div>
+
+          <div class="date-birth-field">
+            <span>  Your Date of Birth: <span class="orange-color font-s-italic">(Very Important!)(mm/dd/yy)</span>*</span>
+            <select>
+              <option value="#"></option>
+              <option value="#"></option>
+              <option value="#"></option>
+              <option value="#"></option>
+              <option value="#"></option>
+            </select>
+
+            <span>-</span>
+
+            <select>
+              <option value="#"></option>
+              <option value="#"></option>
+              <option value="#"></option>
+              <option value="#"></option>
+              <option value="#"></option>
+            </select>
+
+             <span>-</span>
+
+            <select>
+              <option value="#"></option>
+              <option value="#"></option>
+              <option value="#"></option>
+              <option value="#"></option>
+              <option value="#"></option>
+            </select>
+          </div>
+
+          <div>
+            <input type="text" id="city" name="city">
+          </div>
+
+          <div class="time-born">
+             <p>If ordering an Astrology Reading - Very Important!</p>
+              <span>The time you were born (approx.)</span>
+              <div class="time-born__content">
+                <label for="time-am">AM</label>
+                <input type="radio" name="time" id="time-am" value="time-am">
+                <label for="time-pm">PM</label>
+                <input type="radio" name="time" id="time-pm" value="time-pm">
+                <label for="unknown">Unknown</label>
+                <input type="radio" name="time" id="unknown" value="unknown">
+              </div>
+          </div>
+
+          <div class="ordering">
+
+          </div>
+
+
+
+
+
+        </form>
+
+
+       </div><!-- .contact-information-block -->
+
+
+
+
+    </section><!-- .page-form -->
+
+  </div><!-- .my-container -->
+
+</div><!-- .page-container -->
+
+</div><!-- .wrapper -->
+
+	@@include('_include/footer.html')
+
+	@@include('_include/inc_script.html')
+
+</body>
+</html>

@@ -1,0 +1,223 @@
+.page-form {
+  margin-top: 5rem;
+  background-color: #fff;
+  border-radius: 10px;
+  border: 1px solid #b0b0b0;
+}
+
+.page-form__header {
+  padding-top: 5rem;
+  text-align: center;
+  border-bottom: 1px solid #b0b0b0;
+
+  h2 {
+    padding-bottom: 44px;
+    color: #3a3839;
+    font-family: $font-family-AvenirLT-900;
+    font-size: 3rem;
+    text-transform: uppercase;
+    line-height: 19px;
+  }
+
+  p {
+    width: 43%;
+    padding-bottom: 4.6rem;
+    line-height: 30px;
+    margin: 0 auto;
+  }
+}
+
+
+/*------------------------.contact-information-block-----------------------*/
+
+
+.contact-information-block {
+
+}
+
+
+.contact-information-block__header {
+  text-align: center;
+  padding-top: 30px;
+
+  h3 {
+    color: #3a3839;
+    font-family: $font-family-AvenirLT-900;
+    font-size: 1.8rem;
+    line-height: 19px;
+  }
+
+  p {
+    max-width: 342px;
+    margin: 0 auto;
+  }
+}
+
+
+.contact-information-block {
+  text-align: right;
+
+  form {
+  max-width: 849px;
+  padding-top: 23px;
+  overflow: hidden;
+
+    label, span {
+      font-size: 14px;
+      display: inline-block;
+      padding-bottom: 5px;
+      padding-top: 5px;
+    }
+
+    label {
+      margin-right: 13px;
+    }
+  }
+
+  //Type form
+  div:nth-child(1) {
+
+    span {
+     margin-right: 12px;
+    }
+  }
+
+  //First Name
+  div:nth-child(2) {
+    position: relative;
+
+    label {
+      padding-bottom: 0;
+      position: absolute;
+      left: 250px;
+      top: 5px;
+
+      span {
+       line-height: normal;
+       display: table-row-group;
+      }
+    }
+  }
+
+
+  //Email address
+  div:nth-child(11) {
+    input[type='text'] {
+      margin-bottom: 5px;
+    }
+
+    label {
+      margin-right: 12px;
+    }
+  }
+
+
+  //sex
+  .form-sex {
+    margin-left: 309px;
+    display: flex;
+    align-items: center;
+
+    span {
+      margin-right: 10px;
+    }
+
+    label {
+      padding-top: 6px;
+    }
+
+    input[type='radio'] {
+      margin-right: 14px;
+    }
+
+    label:nth-child(2) {
+      margin-left: 13px;
+    }
+
+    label:nth-last-child(2) {
+      margin-left: 33px;
+    }
+
+    span:nth-child(1) {
+      margin-right: 4px;
+    }
+  }
+
+  //Date of Birth
+  .date-birth-field {
+
+    .time-born__content {
+      padding-right: 211px;
+    }
+
+    span:nth-child(1) {
+      margin-right: 2px;
+    }
+
+    span:nth-child(3) {
+      margin-left: 17px;
+      margin-right: 17px;
+    }
+
+    span:nth-child(5) {
+      margin-left: 17px;
+      margin-right: 17px;
+    }
+
+    select {
+      max-width: 98px;
+    }
+  }
+
+   // The time you were born
+  .time-born {
+
+    p {
+      padding-top: 18px;
+      font-size: 14px;
+      padding-right: 77px;
+    }
+
+    label {
+      margin-right: 10px;
+    }
+
+    span {
+      float: left;
+      padding-left: 238px;
+      margin-right: 18px;
+    }
+
+   .time-born__content {
+      display: flex;
+      align-items: center;
+   }
+
+   input[type='radio'] {
+      margin-right: 44px;
+    }
+  }
+}
+
+
+.time-born:before  {
+  content: "";
+  height: 1px;
+  width: 100%;
+  position: absolute;
+  display: block;
+  border-top: 1px solid #b0b0b0;
+}
+
+.time-born:after  {
+  content: "";
+  height: 1px;
+  width: 100%;
+  position: absolute;
+  display: block;
+  border-top: 1px solid #b0b0b0;
+}
+
+.ordering {
+  padding-top: 20px;
+}
