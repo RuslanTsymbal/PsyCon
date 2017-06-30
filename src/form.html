@@ -31,7 +31,7 @@
 
         <form name="contact-information" action="#" method="#">
 
-          <div>
+          <div class="type-form-field">
             <span>Please chosse type from this menu *</span>
             <select>
               <option>Please chosse type from this menu</option>
@@ -40,15 +40,12 @@
               <option value="#"></option>
               <option value="#"></option>
             </select>
-          </div>
+          </div><!-- .type-form-field -->
 
-          <div>
-            <label for="first-name">
-              <span class="display-block">First Name *</span>
-              <span class="display-block">(Credit Card Billing First Name)</span>
-            </label>
+          <div class="first-name-field">
+            <label for="first-name">First Name *<br>(Credit Card Billing First Name)</label>
             <input type="text" id="first-name" name="first-name">
-          </div>
+          </div><!-- .first-name-field -->
 
           <div>
             <label for="last-name">Last Name *</label>
@@ -90,23 +87,24 @@
             <input type="text" id="fax-number" name="fax-number">
           </div>
 
-          <div>
-            <label for="fax-number">Email address <span class="orange-color font-s-italic">(important!)</span> *</label>
+          <div class="email-address-field">
+            <label for="fax-number">Email address <i class="orange-color">(important!)</i> *</label>
             <input type="text" id="email-address" name="email-address">
-          </div>
+          </div><!-- .email-address-field -->
 
-          <div class="form-sex">
-            <span for="sex">Sex <span class="font-s-italic">(at time of birth)</span>*</span>
-
-              <label for="sex-male">Male</label>
+          <div class="form-sex-field">
+            <span for="sex">Sex <i>(at time of birth) </i> *</span>
+            <div>
               <input type="radio" name="sex" id="sex-male" value="sex-male">
-              <label for="sex-female">Female</label>
-              <input type="radio" name="sex" id="sex-female" value="sex-female" checked>
+              <label for="sex-male">Male</label>
 
-          </div>
+              <input type="radio" name="sex" id="sex-female" value="sex-female" checked>
+              <label for="sex-female">Female</label>
+            </div>
+          </div><!-- .form-sex-field -->
 
           <div class="date-birth-field">
-            <span>  Your Date of Birth: <span class="orange-color font-s-italic">(Very Important!)(mm/dd/yy)</span>*</span>
+            <span>  Your Date of Birth: <i class="orange-color">(Very Important!)(mm/dd/yy) </i> *</span>
             <select>
               <option value="#"></option>
               <option value="#"></option>
@@ -134,28 +132,72 @@
               <option value="#"></option>
               <option value="#"></option>
             </select>
-          </div>
+            <p>overseas clients please put the month first</p>
 
-          <div>
+          </div><!-- .date-birth-field -->
+
+          <div class="date-birth-field-bot">
             <input type="text" id="city" name="city">
           </div>
 
-          <div class="time-born">
-             <p>If ordering an Astrology Reading - Very Important!</p>
-              <span>The time you were born (approx.)</span>
-              <div class="time-born__content">
-                <label for="time-am">AM</label>
-                <input type="radio" name="time" id="time-am" value="time-am">
-                <label for="time-pm">PM</label>
-                <input type="radio" name="time" id="time-pm" value="time-pm">
-                <label for="unknown">Unknown</label>
-                <input type="radio" name="time" id="unknown" value="unknown">
-              </div>
+<!--border--><span class="form-border"></span>
+
+          <div class="time-born-field">
+            <p>If ordering an<b class="font-w-900"> Astrology Reading</b> - Very Important!</p>
+            <span>The time you were born (approx.)</span>
+            <div class="time-born__content">
+              <input type="radio" name="time" id="time-am" value="time-am">
+              <label for="time-am">AM</label>
+
+              <input type="radio" name="time" id="time-pm" value="time-pm">
+              <label for="time-pm">PM</label>
+
+              <input type="radio" name="time" id="unknown" value="unknown">
+              <label for="unknown">Unknown</label>
+            </div>
+          </div><!-- .time-born-field -->
+
+<!--border--><span class="form-border"></span>
+
+          <div class="ordering-field">
+            <p>If ordering a <b class="font-w-900">Numerology Reading</b> enter the name
+            and\or date of birth you wish the Reading done
+            for (usually the name on birth certificate or the name
+            being used now)</p>
+
+            <div>
+              <label for="numerology-name-ordering">Name</label>
+              <input type="text" id="numerology-name-ordering" name="numerology-name-ordering" placeholder="Your numerology name">
+            </div>
+
+            <div>
+              <label for="date-birth-ordering">Date of Birth</label>
+              <input type="text" id="date-birth-ordering" name="date-birth-ordering" placeholder="Date of birth">
+            </div>
+          </div><!-- .ordering-field -->
+
+<!--border--><span class="form-border"></span>
+
+          <div class="topic-field">
+            <p>In one or two words only, please enter the <b class="font-w-900">topic that concerns you the most </b>(optional)(I.E.: Love, Relationship, Health, Career, $$$$, etc.)</p>
+
+            <div>
+              <input type="text" id="topic" name="topic">
+            </div>
+          </div><!-- .topic-field -->
+
+<!--border--><span class="form-border"></span>
+
+          <div class="choose-personal">
+
+          <p>If you would like to choose your own personal Psychic,
+          Reader, Astrologer, or Numerologist from the list of our
+          Readers, please check the button at the right of this
+          window and type in their name here:</p>
+         <span>(If you leave this blank, we will choose the Reader for you) *</span>
+
           </div>
 
-          <div class="ordering">
-
-          </div>
 
 
 
