@@ -1,5 +1,20 @@
 $(document).ready(function() {
 
+  var widthParent_1 = $('.chat-pricing-cell').width();
+  var widthlement_1 = $('.chat-pricing-cell__min').width();
+  var styleleft_1 = (widthParent_1 - widthlement_1 ) / 2 + 'px';
+
+  $('.chat-pricing-cell__min').css("left", styleleft_1);
+
+
+  var widthParent_2 = $('.chat-pricing-cell-little').width();
+  var widthlement_2 = $('.chat-pricing-cell__min-little').width();
+  var styleleft_2 = (widthParent_2 - widthlement_2 ) / 2 + 'px';
+
+  $('.chat-pricing-cell__min-little').css("left", styleleft_2);
+
+
+
   //add class if width < 769px
   var width = $('body').innerWidth();
   if (width < 769) {
