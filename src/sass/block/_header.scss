@@ -235,10 +235,6 @@
           transition: 0.5s;
         }
       }
-
-      li:hover {
-        background-color: #ffa934!important;
-      }
     }
 
     a:nth-child(1) {
@@ -517,7 +513,7 @@
       }
     }
 
-    li:hover {
+    .nav-point:hover {
       background-color: #ff9834;
     }
 

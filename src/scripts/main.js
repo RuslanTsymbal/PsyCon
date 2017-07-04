@@ -77,6 +77,7 @@ $(document).ready(function() {
     if (container.has(e.target).length === 0){
       container.hide("slow");
       $("#overlay").remove();
+      $("html,body").css("overflow","auto");
 
     } else {
       statusNew = true;

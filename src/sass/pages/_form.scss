@@ -70,7 +70,7 @@
   }
 
   p {
-    max-width: 572px;
+    max-width: 578px;
     padding-bottom: 39px;
     line-height: 30px;
     margin: 0 auto;
@@ -90,6 +90,13 @@
       padding-right: 10px;
       padding-left: 10px;
       padding-bottom: 18px;
+    }
+
+    br {
+
+      @include max-w(480px) {
+        display: none;
+      }
     }
   }
 }
@@ -1130,7 +1137,6 @@
     }
 
     p:nth-child(2) {
-      max-width: 624px;
       margin: 0 auto;
       padding-top: 30px;
 
@@ -1142,7 +1148,6 @@
     }
 
     p:nth-child(3) {
-      max-width: 502px;
       margin: 0 auto;
       padding-top: 35px;
       padding-bottom: 43px;

@@ -163,21 +163,22 @@
     display: block;
     position: absolute;
     right: 19px;
-    top: 30px;
+    top: 12px;
   }
 
   @include max-w($screen-sm) {
-    top: 8px;
+    right: 14px;
+    top: 10px;
   }
 
   @include max-w(375px) {
-    right: 20px!important;
-    top: 5px!important;
+    right: 4px!important;
+    top: 21px!important;
   }
 
    @include max-w(320px) {
-    right: 11px!important;
-    top: 14px!important;
+    right: 3px!important;
+    top: 22px!important;
   }
 }
 
@@ -194,19 +195,39 @@
 
     @include max-w($screen-xs) {
       height: 3px;
-    }
-
-    @include max-w($screen-xs) {
       width: 27px;
       height: 4px;
       margin-top: 0px;
       margin-bottom: 7px;
+    }
+
+    @include max-w(480px) {
+      height: 4px;
+      width: 30px;
+      margin-top: 5px;
+      margin-right: 0px;
+      margin-bottom: 6px;
+      margin-left: 0px;
+    }
+
+    @include max-w(375px) {
+      height: 4px;
+      width: 24px;
+      margin-top: 0px;
+      margin-right: 0px;
+      margin-bottom: 3px;
+      margin-left: 0px;
     }
 }
 
 .change .bar1 {
   -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
   transform: rotate(-45deg) translate(-9px, 6px) ;
+
+  @include max-w(768px) {
+    -webkit-transform: rotate(-45deg) translate(-8px, 7px) ;
+    transform: rotate(-45deg) translate(-8px, 7px) ;
+  }
 }
 
 .change .bar2 {
@@ -220,6 +241,20 @@
 
 .bg-bar {
   background-color: #993300;
+
+  @include max-w(480px) {
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 7px;
+    margin-left: 0px;
+  }
+
+  @include max-w(375px) {
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 7px;
+    margin-left: 0px;
+  }
 }
 
 
