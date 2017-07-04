@@ -2,8 +2,8 @@
 
 .btn {
   width: 129px;
-  padding-top: 4px;
-  padding-bottom: 4px;
+  padding-top: 5.5px;
+  padding-bottom: 2.5px;
   color: #fff;
   font-size: 1.4rem;
   font-weight: bold;
@@ -17,7 +17,7 @@
 
 .btn-sign {
   background-color: $button-sign-color;
-  border-bottom: 2px solid #038740;
+  border-bottom: 3px solid #038740;
 
   @include max-w(1440px) {
     width: 100px;
@@ -88,13 +88,32 @@
 .btn-offline {
   background-color: #cecece;
   border-bottom: 3px solid #b7b7b7;
+  padding-left: 20px;
+  padding-right: 10px;
+  padding-top: 3px;
+  height: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+
+  i {
+    font-size: 18px;
+  }
+
+  .fa-envelope:before {
+    width: 18px;
+    height: 14px;
+  }
 }
+
 
 //btn-session
 
 .btn-session {
   background-color: #0058e9;
   border-bottom: 3px solid #003493;
+  padding-top: 3px;
+  height: 30px;
 }
 
 //btn-chat
@@ -102,6 +121,8 @@
 .btn-chat {
   background-color: #0acf66;
   border-bottom: 3px solid #05a450;
+  padding-top: 3px;
+  height: 30px;
 }
 
 //btn-show
@@ -126,7 +147,7 @@
 }
 
 .btn:focus {
-    outline: none;
+  outline: none;
 }
 
 
@@ -141,7 +162,7 @@
   @include max-w($screen-md) {
     display: block;
     position: absolute;
-    right: 15px;
+    right: 19px;
     top: 30px;
   }
 
@@ -150,12 +171,13 @@
   }
 
   @include max-w(375px) {
-    right: 10px!important;
-    top: 8px!important;
+    right: 20px!important;
+    top: 5px!important;
   }
 
    @include max-w(320px) {
-    right: 4px!important;
+    right: 11px!important;
+    top: 14px!important;
   }
 }
 
@@ -183,15 +205,17 @@
 }
 
 .change .bar1 {
-    -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
-    transform: rotate(-45deg) translate(-9px, 6px) ;
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+  transform: rotate(-45deg) translate(-9px, 6px) ;
 }
 
-.change .bar2 {opacity: 0;}
+.change .bar2 {
+  opacity: 0;
+}
 
 .change .bar3 {
-    -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
-    transform: rotate(45deg) translate(-8px, -8px) ;
+  -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+  transform: rotate(45deg) translate(-8px, -8px) ;
 }
 
 .bg-bar {
@@ -218,7 +242,6 @@
 
 
 
-
 //slider-check button
 
 .slider-check {
@@ -232,15 +255,19 @@
   }
 }
 
-//btn-in-session
 
-.btn-in-session {
+//profile-btn-session
+
+.profile-btn-session {
   width: 100%;
   border-radius: 3px;
   background-color: #ff1f00;
-  border-bottom: 2px solid #c51500;
+  border-bottom: 3px solid #c51500;
   transition: 0.5s;
+  padding-top: 3px;
+  height: 30px;
 }
+
 
 .btn-in-session:hover {
   background-color: #ff0000;
@@ -248,6 +275,76 @@
 
 button:focus {
   outline: none;
+}
+
+
+
+//profile-btn-online
+
+.profile-btn-online {
+  width: 100%;
+  border-radius: 3px;
+  background-color: #0acf66;
+  border-bottom: 2px solid #05a450;
+  transition: 0.5s;
+  padding-top: 3px;
+  height: 30px;
+}
+
+.profile-btn-online:hover {
+  background-color: #07b85b;
+}
+
+
+//profile-btn-offline
+.profile-btn-offline {
+  width: 100%;
+  border-radius: 3px;
+  background-color: #cecece;
+  border-bottom: 2px solid #b7b7b7;
+  transition: 0.5s;
+  padding-top: 3px;
+  padding-right: 10px;
+  padding-left: 10px;
+  height: 30px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+
+  i:nth-child(1) {
+    font-size: 11px;
+    text-transform: none;
+    font-style: normal;
+  }
+
+  i:nth-child(1):before {
+    content: "";
+    position: absolute;
+    height: 23px;
+    width: 2px;
+    top: 3px;
+    left: 60px;
+    border-right: 2px solid #b6b6b6;
+  }
+
+  i:nth-child(2) {
+    font-size: 18px;
+  }
+}
+
+
+.profile-btn-offline:hover {
+   background-color: #bababa;
+
+   i:nth-child(1):before {
+    content: "";
+    position: absolute;
+    height: 23px;
+    width: 2px;
+    top: 3px;
+    left: 60px;
+    border-right: 2px solid #a3a3a3;
+  }
 }
 
 
@@ -300,4 +397,34 @@ button:focus {
       width: 100%;
     }
   }
+}
+
+
+.profile-btn-login {
+  width: 128px;
+  margin: 0 auto;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  display: block;
+  border: none;
+  color: #fff;
+  border-radius: 3px;
+  background-color: #0acf66;
+  border-bottom: 2px solid #05a450;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: bold;
+  transition: 0.5s;
+}
+
+.profile-btn-login:hover {
+   background-color: #07b85b;
+}
+
+
+
+//profile-btn
+
+.profile-btn {
+  font-size: 14px;
 }

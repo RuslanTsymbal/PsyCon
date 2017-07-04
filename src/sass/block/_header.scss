@@ -235,6 +235,10 @@
           transition: 0.5s;
         }
       }
+
+      li:hover {
+        background-color: #ffa934!important;
+      }
     }
 
     a:nth-child(1) {
@@ -276,7 +280,9 @@
 
 
 
+
 /*----------------------------.burger-menu-bot---------------------*/
+
 
 
 
@@ -370,7 +376,9 @@
 
 
 
+
 /*----------------------.header-banner---------------------------*/
+
 
 
 
@@ -424,6 +432,8 @@
 
 
 /*------------------------.page-header__nav--------------------------*/
+
+
 
 .mob-nav {
 
@@ -507,12 +517,12 @@
       }
     }
 
-    li:nth-last-child(1) {
-      margin-bottom: 0;
-    }
-
     li:hover {
       background-color: #ff9834;
+    }
+
+    li:nth-last-child(1) {
+      margin-bottom: 0;
     }
   }
 

@@ -8,7 +8,6 @@ $(document).ready(function() {
     $(".page-header__nav").removeClass("nav-mob");
   }
 
-
   //slick-slider
    $('.fade').slick({
     dots: true,
@@ -22,7 +21,7 @@ $(document).ready(function() {
   var statusNew = false;
 
   //burger-menu  hide and show
-  $( ".burger-menu" ).click(function() {
+  $(".burger-menu").click(function() {
 
     var darkBlock = $("div").is("#overlay");
 
@@ -44,20 +43,20 @@ $(document).ready(function() {
       $("#overlay")
           .height(docHeight)
           .css({
-             'opacity' : 0.4,
-             'position': 'absolute',
-             'top': 0,
-             'left': 0,
-             'background-color': 'black',
-             'width': '100%',
-             'z-index': 1
+            'opacity' : 0.4,
+            'position': 'absolute',
+            'top': 0,
+            'left': 0,
+            'background-color': 'black',
+            'width': '100%',
+            'z-index': 1
         });
     }
 
     if(statusFirst) {
       $("#overlay").remove();
       statusFirst = false;
-       $("html,body").css("overflow","auto");
+      $("html,body").css("overflow","auto");
     }
   });
 
@@ -74,6 +73,7 @@ $(document).ready(function() {
     }
 
     var container = $(".nav-mob");
+
     if (container.has(e.target).length === 0){
       container.hide("slow");
       $("#overlay").remove();
@@ -93,4 +93,7 @@ $(document).ready(function() {
       }
     }
   });
+
+   //Plugin select
+   $("select" ).selecter();
 });

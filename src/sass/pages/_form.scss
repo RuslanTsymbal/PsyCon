@@ -1,14 +1,47 @@
+.form-container {
+
+  @include max-w(1280px) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  @include max-w(375px) {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
 .page-form {
   margin-top: 5rem;
   background-color: #fff;
   border-radius: 10px;
   border: 1px solid #b0b0b0;
+
+  @include max-w($screen-md) {
+    margin-top: 2.5rem;
+  }
+
+  @include max-w(375px) {
+    margin-top: 0px;
+  }
 }
 
 .page-form__header {
   padding-top: 5rem;
   text-align: center;
   border-bottom: 1px solid #b0b0b0;
+
+  @include max-w($screen-sm) {
+    padding-top: 4rem;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  @include max-w(375px) {
+    padding-top: 17px;
+    padding-left: 0;
+    padding-right: 0;
+  }
 
   h2 {
     padding-bottom: 44px;
@@ -17,54 +50,193 @@
     font-size: 3rem;
     text-transform: uppercase;
     line-height: 19px;
+
+    @include max-w($screen-md) {
+      padding-bottom: 48px;
+    }
+
+    @include max-w($screen-sm) {
+      line-height: 19px;
+      font-size: 2rem;
+      padding-bottom: 35px;
+    }
+
+    @include max-w(375px) {
+      font-size: 16px;
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-bottom: 7px;
+    }
   }
 
   p {
-    width: 43%;
-    padding-bottom: 4.6rem;
+    max-width: 572px;
+    padding-bottom: 39px;
     line-height: 30px;
     margin: 0 auto;
+
+    @include max-w($screen-md) {
+      padding-bottom: 44px;
+    }
+
+    @include max-w($screen-sm) {
+      line-height: 26px;
+      padding-bottom: 35px;
+    }
+
+    @include max-w(375px) {
+      font-size: 14px;
+      line-height: 17px;
+      padding-right: 10px;
+      padding-left: 10px;
+      padding-bottom: 18px;
+    }
   }
 }
+
 
 
 /*------------------------.contact-information-block-----------------------*/
 
 
+
 .contact-information-block__header {
+  max-width: 546px;
   text-align: center;
   padding-top: 28px;
+  margin: 0 auto;
+
+  @include max-w($screen-sm) {
+    padding-top: 50px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  @include max-w(375px) {
+    padding-top: 38px;
+    padding-left: 10px;
+  }
 
   h3 {
     color: #3a3839;
     font-family: $font-family-AvenirLT-900;
     font-size: 1.8rem;
     line-height: 19px;
+
+    @include max-w(375px) {
+      font-size: 14px;
+    }
   }
 
-  p {
-    max-width: 342px;
-    margin: 0 auto;
-    padding-top: 22px;
-    line-height: 18px;
+  .form-data-description {
+      display: none;
+      max-width: 342px;
+      margin: 0 auto;
+      padding-bottom: 26px;
+      padding-top: 16px;
+      line-height: 21px;
+
+      @include max-w($screen-xl) {
+        display: block;
+      }
+
+      @include max-w($screen-sm) {
+        padding-bottom: 0;
+        max-width: 100%;
+        text-align: left;
+      }
+
+      @include max-w(375px) {
+        padding-top: 12px;
+        padding-right: 7px;
+        font-size: 14px;
+        line-height: 17px;
+      }
   }
 }
 
 
 .contact-information-block {
   text-align: right;
+  position: relative;
 
   form {
-  max-width: 849px;
-  padding-top: 30px;
-  overflow: hidden;
+    padding-top: 21px;
+    overflow: hidden;
+
+    @include max-w(375px) {
+      padding-top: 10px;
+    }
+
+    .form-data-description {
+      max-width: 388px;
+      padding-bottom: 26px;
+      text-align: left;
+      margin-left: auto;
+      margin-right: 0;
+      line-height: 21px;
+
+      @include max-w($screen-xl) {
+        display: none;
+      }
+    }
+
+    .warning-text {
+      position: absolute;
+      top: 60px;
+      right: 30px;
+      color: #ff0000;
+      padding: 0;
+      margin-right: 0;
+      font-style: italic;
+
+      @include max-w(1024px) {
+        top: 115px;
+        right: 204px;
+      }
+
+      @include max-w($screen-md) {
+        right: 59px;
+      }
+
+      @include max-w($screen-sm) {
+        top: 10px;
+        right: 228px;
+      }
+
+      @include max-w(375px) {
+        width: 100%;
+        right: 137px;
+        top: 10px;
+      }
+
+      @include max-w(320px) {
+        width: 100%;
+        right: 82px;
+        top: 8px;
+      }
+    }
+
+    .selecter-selected {
+
+      @include max-w(320px) {
+        width: 278px;
+      }
+    }
 
     label, span {
       font-size: 14px;
       display: inline-block;
       padding-bottom: 5px;
       padding-top: 5px;
-      margin-right: 12px;
+      margin-right: 15px;
+      line-height: 30px
+    }
+
+    span {
+       @include max-w(480px) {
+        line-height: 17px;
+      }
     }
 
     ::-webkit-input-placeholder {color: #999999; font-size: 14px;}
@@ -78,6 +250,30 @@
   }
 }
 
+.form-data__wrapper {
+  max-width: 914px;
+  padding-right: 44px;
+
+  @include max-w($screen-xl) {
+    max-width: 100%;
+    padding-right: 200px;
+  }
+
+  @include max-w($screen-md) {
+    padding-right: 56px;
+  }
+
+  @include max-w($screen-sm) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  @include max-w(375px) {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
 .form-border {
   width: 100%;
   height: 1px;
@@ -85,44 +281,170 @@
   position: absolute;
   display: block!important;
   border-top: 1px solid #cdcdcd;
+
+  @include max-w($screen-sm) {
+    margin-right: -15px!important;;
+    margin-left: -15px;
+  }
+
+  @include max-w(375px) {
+    margin-right: -0!important;;
+    margin-left: -10px;
+  }
 }
+
+
+
 
 /*--------------------fields form---------------------------*/
 
-.type-form-field {
 
-  select {
-    margin-bottom: 13px!important;
+
+.type-form-field {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  padding-bottom: 13px ;
+
+  @include max-w($screen-sm) {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  @include max-w(375px) {
+    padding-bottom: 11px;
+  }
+
+  .selecter-options {
+
+    span:nth-child(1) {
+      color: #999999;
+    }
+  }
+
+  span.selecter-selected {
+
+    @include max-w(375px) {
+      color: #fff;
+    }
+
+    @include max-w(320px) {
+      width: 278px;
+    }
+  }
+
+  span.selecter-selected:hover {
+    color: #999;
+
+    @include max-w(375px) {
+      color: #fff;
+    }
   }
 }
 
 .first-name-field {
-  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-end;
+
+  @include max-w($screen-sm) {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
 
   label {
-    margin-right: 13px!important;
     padding-bottom: 0;
-    position: absolute;
-    left: 250px;
-    top: 8px;
-    line-height: 15px;
+    line-height: 15px!important;
+
+    @include max-w($screen-xl) {
+      left: 194px;
+    }
+
+    @include max-w($screen-md) {
+      left: 98px;
+      top: 11px;
+    }
+
+    @include max-w($screen-sm) {
+      text-align: left;
+      line-height: 17px!important;
+    }
+  }
+
+  input {
+    margin-top: 0;
   }
 }
+
+.street-address-1-field {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  padding-bottom: 13px;
+
+  @include max-w($screen-sm) {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-bottom: 0;
+  }
+
+   .title-field-2 {
+    line-height: 17px;
+    display: none;
+
+    @include max-w(768px) {
+      display: block!important;
+    }
+  }
+
+  .title-field {
+    line-height: 17px;
+    display: block;
+
+    @include max-w(768px) {
+      display: none!important;
+    }
+  }
+}
+
 
 .form-sex-field {
   padding-top: 5px;
   padding-bottom: 7px;
-  margin-left: 309px;
+
+  @include max-w(375px) {
+    padding-bottom: 1px;
+    padding-top: 0;
+  }
 
   div {
     display: flex;
     align-items: center;
     width: 388px;
     float: right;
+
+    @include max-w($screen-sm) {
+      float: none;
+    }
+
+    @include max-w(375px) {
+      height: 20px;
+    }
   }
 
   span {
     margin-right: 15px!important;
+
+    @include max-w($screen-sm) {
+      text-align: left;
+      display: block!important;
+    }
   }
 
   input[type='radio'] {
@@ -131,8 +453,31 @@
 
   input[type="radio"] + label::after  {
     position: absolute;
-    top: 10px;
+    top: 12px;
     margin-left: 7px;
+    height: 18px;
+    width: 18px;
+    padding: 8px 8.8px 9.5px 8px;
+
+    @include max-w(2560px) {
+      padding: 8px 7.8px 8.5px 8px;
+    }
+
+    @include max-w(1368px) {
+      padding: 8px 8.5px 8.1px 8px;
+    }
+
+    @include max-w(1366px) {
+      padding: 8px 8.2px 7.2px 8px;
+    }
+
+    @include max-w(1280px) {
+      padding: 8px 8px 8px 8px;
+    }
+
+    @include max-w(1024px) {
+      padding: 8px 7.5px 7.5px 8px;
+    }
   }
 
   label {
@@ -147,49 +492,179 @@
 
 
 .email-address-field {
+
   input[type='text'] {
     margin-bottom: 5px;
   }
 }
 
 .date-birth-field {
-  overflow: hidden;
 
-  span:nth-child(3) {
-    margin-left: 17px;
-    margin-right: 17px;
+  @include max-w(375px) {
+    padding-top: 9px;
   }
 
-  span:nth-child(5) {
-    margin-left: 17px;
-    margin-right: 17px;
+  .title-field {
+    float: left;
+    padding-left: 18.8%;
+    line-height: 30px;
+
+    @include max-w($screen-xl) {
+      padding-left: 10.8%;
+    }
+
+    @include max-w(768px) {
+      display: none;
+    }
+  }
+
+  .title-field-2 {
+    float: left;
+    padding-left: 18.8%;
+    line-height: 19px;
+    display: none;
+
+    @include max-w($screen-xl) {
+      padding-left: 10.8%;
+    }
+
+    @include max-w(768px) {
+      display: inline-block;
+      padding-left: 13.3%;
+    }
+
+    @include max-w(751px) {
+      padding-left: 11.1%;
+    }
+
+    @include max-w($screen-sm) {
+      padding-left: 0;
+      display: block;
+      text-align: left;
+      margin-right: 0!important;
+    }
+
+    @include max-w(375px) {
+      padding-bottom: 8px;
+    }
+  }
+
+  .hide-line {
+
+    @include max-w(375px) {
+      display: none!important;
+    }
+  }
+
+  .date-birth-field__wrapper {
+    width: 388px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: 0;
+
+    @include max-w($screen-sm) {
+      margin-left: 0;
+    }
+
+    @include max-w(375px) {
+      width: 100%;
+    }
+
+    .selecter {
+      margin-left: 0;
+      padding-top: 0;
+      height: 41px;
+
+      .selecter-selected {
+        margin-left: 0;
+      }
+    }
+
+    span {
+      display: block;
+      margin: 0;
+      padding-top: 5px;
+    }
   }
 
   p {
     width: 388px;
     padding-bottom: 10px;
+    padding-top: 5px;
     text-align: left;
     float: right;
     font-size: 14px;
     font-style: italic;
     line-height: 14px;
+
+    @include max-w($screen-sm) {
+      float: none;
+    }
+
+    @include max-w(375px) {
+      padding-top: 4px;
+      padding-bottom: 5px;
+    }
   }
 
-  select {
+  .selecter {
     max-width: 98px!important;
+
+    .selecter-selected {
+      max-width: 98px!important;
+      height: 41px;
+      padding-left: 5px;
+
+      @include max-w(375px) {
+        max-width: 81px!important;
+        height: 31px;
+      }
+    }
+
+    .selecter-options {
+
+      span {
+        margin-left: 0;
+      }
+    }
+
+    select {
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
   }
 
   label {
     position: relative;
   }
+
+  select {
+    padding-right: 2px;
+    padding-left: 5px;
+  }
 }
 
 
 .time-born-field {
-  padding-bottom: 23px;
+  padding-bottom: 17px;
+
+  @include max-w($screen-sm) {
+    overflow: hidden;
+  }
+
+  @include max-w(375px) {
+    padding-bottom: 8px;
+  }
 
   span {
     margin-right: 17px!important;
+
+    @include max-w($screen-sm) {
+      display: block;
+      text-align: left;
+      width: 100%;
+    }
   }
 
   p {
@@ -200,6 +675,22 @@
     text-align: left;
     margin-left: auto;
     margin-right: 0;
+
+    @include max-w($screen-sm) {
+      margin-left: 0;
+      width: 100%;
+    }
+
+    @include max-w(375px) {
+      width: 61%!important;
+      padding-top: 12px;
+      padding-bottom: 9px;
+      line-height: 17px;
+    }
+
+    @include max-w(320px) {
+      width: 74%!important;
+    }
 
     span {
       padding: 0;
@@ -217,30 +708,77 @@
     float: right;
     display: flex;
     align-items: center;
+
+    @include max-w($screen-sm) {
+      width: 100%;
+    }
   }
 
   input[type="radio"] + label::after  {
     position: absolute;
     top: 10px;
     margin-left: 4px;
+    height: 18px;
+    width: 18px;
+    padding: 8px 8.8px 8.5px 8px;
+
+    @include max-w(2560px) {
+      padding: 8px 7.8px 8.5px 8px;
+    }
+
+    @include max-w(1600px) {
+      padding: 8px 8px 8px 8px;
+    }
+
+    @include max-w(1368px) {
+      padding: 8px 8.1px 8.1px 8px;
+    }
+
+    @include max-w(1280px) {
+      padding: 8px 8px 8px 8px;
+    }
   }
 }
 
 .date-birth-field-bot {
-  padding-bottom: 17px;
+  padding-bottom: 19px;
+  clear: both;
+
+  input {
+
+    @include max-w($screen-sm) {
+      display: block;
+    }
+  }
 }
 
 .ordering-field {
   padding-top: 26px;
-  padding-bottom: 23px;
+  padding-bottom: 16px;
+
+  @include max-w(375px) {
+    padding-top: 18px;
+    padding-bottom: 7px;
+  }
 
   p {
     padding-right: 10px;
-    padding-bottom: 11px;
+    padding-bottom: 6px!important;
     width: 388px;
     text-align: left;
     float: right;
     line-height: 19px;
+
+    @include max-w($screen-sm) {
+      float: none;
+      padding-bottom: 16px!important;
+    }
+
+    @include max-w(375px) {
+      padding-right: 0;
+      width: 100%;
+      padding-bottom: 12px!important;
+    }
   }
 
   div {
@@ -250,39 +788,451 @@
 
 .topic-field {
   clear: both;
-  padding-top: 30px;
-  padding-bottom: 17px;
+  padding-top: 26px;
+  padding-bottom: 20px;
+
+  @include max-w(375px) {
+    padding-top: 18px;
+    padding-bottom: 9px;
+  }
 
   p {
     padding-right: 16px;
-    padding-bottom: 11px;
+    padding-bottom: 9px;
     width: 388px;
     text-align: left;
     float: right;
     line-height: 19px;
+
+    @include max-w($screen-sm) {
+      float: none;
+    }
+
+    @include max-w(375px) {
+      width: 100%;
+      padding-right: 0;
+      padding-bottom: 0;
+      line-height: 17px;
+    }
   }
 
   div {
     clear: both;
+
+    input {
+
+      @include max-w($screen-sm) {
+        display: block;
+      }
+    }
   }
 }
 
+
 .choose-personal {
   clear: both;
-  padding-top: 30px;
+  padding-top: 27px;
+  padding-bottom: 30px;
+
+  @include max-w(375px) {
+    padding-top: 18px;
+    padding-bottom: 18px;
+  }
 
   p {
-    padding-right: 16px;
-    padding-bottom: 11px;
+    padding-right: 0;
+    padding-bottom: 17px;
     width: 388px;
     text-align: left;
     float: right;
     line-height: 19px;
+
+    @include max-w($screen-sm) {
+      float: none;
+    }
+
+    @include max-w(375px) {
+      line-height: 17px;
+      width: 100%;
+      padding-bottom: 14px;
+    }
+
+    span {
+      margin-right: 0!important;
+      font-weight: 900;
+      padding: 0;
+      font-size: 16px;
+      line-height: 19px;
+
+      @include max-w(375px) {
+        line-height: 17px;
+        font-size: 14px;
+      }
+    }
   }
 
-  span {
+  .choose-personal__description {
+    width: 425px;
+    text-align: left;
+    padding-bottom: 17px;
     clear: both;
-    display: block!important;
+    display: block;
+    margin-right: -37px;
+    font-size: 16px;
 
+    @include max-w(375px) {
+      line-height: 17px;
+      font-size: 14px;
+      width: 247px;
+      padding-bottom: 12px;
+    }
   }
+
+  div:nth-child(3) {
+    clear: both;
+    margin-bottom: 20px;
+
+    @include max-w(375px) {
+      margin-bottom: 12px;
+    }
+
+    .selecter {
+      margin-left: auto;
+      margin-right: 0;
+      clear: both;
+      display: inline;
+
+      @include max-w(375px) {
+        display: block;
+      }
+    }
+
+    .title-field {
+      float: left;
+      padding-left: 32.2%;
+
+      @include max-w($screen-xl) {
+        padding-left: 25.4%;
+      }
+
+      @include max-w($screen-md) {
+        padding-left: 13.4%;
+      }
+
+      @include max-w(751px) {
+        padding-left: 10%;
+      }
+
+      @include max-w($screen-sm) {
+        padding-left: 0;
+      }
+    }
+
+    .selecter-options {
+
+      .selecter-item:nth-child(1) {
+        display: none!important;
+      }
+    }
+  }
+
+
+  div:nth-child(4) {
+    position: relative;
+    padding-bottom: 20px;
+
+    @include max-w(375px) {
+      padding-bottom: 13px;
+    }
+
+    label {
+      position: absolute;
+      top: -14px;
+      right: 392px;
+
+      @include max-w($screen-sm) {
+        position: static;
+      }
+    }
+  }
+
+  div:nth-child(5) {
+    position: relative;
+
+    label {
+      line-height: 15px;
+      position: absolute;
+      top: -6px;
+      right: 392px;
+
+      @include max-w($screen-sm) {
+        position: static;
+      }
+    }
+  }
+
+  textarea {
+    margin-top: 0;
+    margin-bottom: 0!important;
+    padding-top: 7px!important;
+    padding-bottom: 7px!important;
+
+    @include max-w($screen-sm) {
+      display: block;
+    }
+  }
+}
+
+.payment-information {
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+
+  @include max-w($screen-sm) {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .selecter-options {
+
+    .selecter-item:nth-child(1) {
+      display: none!important;
+    }
+  }
+}
+
+
+
+/*-------------------------.form-fields-----------------------*/
+
+
+
+.form-fields {
+  clear: both;
+  padding-top: 30px;
+
+  @include max-w(375px) {
+    padding-top: 12px;
+  }
+}
+
+.card-expiration {
+  margin-top: 10px;
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+
+  @include max-w($screen-sm) {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  div:nth-child(2) {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 0;
+
+    .selecter-options {
+      max-width: 184px;
+    }
+  }
+
+  div {
+    width: 388px;
+    margin-left: auto;
+    margin-right: 0;
+
+    @include max-w(375px) {
+      width: 100%;
+    }
+
+    select,
+    .selecter,
+    .selecter-selected {
+      max-width: 184px;
+      margin-left: 0;
+
+      @include max-w(375px) {
+        max-width: 124px;
+      }
+    }
+  }
+
+  select:nth-child(3) {
+    max-width: 184px;
+    margin-left: 15px;
+  }
+
+  .selecter-options {
+
+    .selecter-item:nth-child(1) {
+      display: none!important;
+    }
+  }
+}
+
+
+
+
+/*-------------------------.form-data__footer------------------------*/
+
+
+
+
+ .form-data__footer {
+    padding-top: 20px;
+    padding-bottom: 50px;
+    max-width: 700px;
+    margin: 0 auto;
+
+    @include max-w($screen-sm) {
+      padding-bottom: 30px;
+    }
+
+    @include max-w(375px) {
+      padding-bottom: 0;
+    }
+
+    p {
+      text-align: center;
+      line-height: 30px;
+
+      @include max-w($screen-sm) {
+        line-height: 26px;
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+
+      @include max-w(375px) {
+        padding-left: 10px;
+        line-height: 17px;
+        font-size: 14px;
+        text-align: left;
+      }
+
+      b {
+        font-family: $font-family-AvenirLT-900;
+        margin-right: 0!important;
+        padding: 0!important;
+        font-size: 16px;
+
+         @include max-w(375px) {
+          line-height: 17px;
+          font-size: 14px;
+        }
+      }
+    }
+
+    p:nth-child(2) {
+      max-width: 624px;
+      margin: 0 auto;
+      padding-top: 30px;
+
+      @include max-w(375px) {
+        width: 100%;
+        padding-right: 0;
+        padding-top: 16px;
+      }
+    }
+
+    p:nth-child(3) {
+      max-width: 502px;
+      margin: 0 auto;
+      padding-top: 35px;
+      padding-bottom: 43px;
+      color: #ff6600;
+
+      @include max-w(375px) {
+        padding-top: 14px;
+        padding-bottom: 20px;
+      }
+    }
+}
+
+.form-data__buttoms {
+  max-width: 470px;
+  margin: 0 auto;
+  padding-right: 0!important;
+  font-size: 14px;
+
+  @include max-w($screen-sm) {
+    width: 100%;
+    padding-right: 5px!important;
+    padding-left: 5px !important;
+    display: flex!important;
+    justify-content: space-between!important;
+    align-items: flex-start!important;
+  }
+
+  @include max-w(375px) {
+    display: block!important;
+  }
+
+  button:nth-child(1) {
+    width: 246px!important;
+    height: 44px;
+
+    @include max-w(375px) {
+      width: 100%!important;
+    }
+  }
+
+  button:nth-child(2) {
+    width: 182px!important;
+    height: 44px;
+
+    @include max-w(375px) {
+      width: 100%!important;
+    }
+  }
+}
+
+.indent-delete {
+
+  font-size:0;
+  line-height:0;
+  letter-spacing:-1px;
+
+  span, label {
+    font-size: 14px;
+    line-height: 3rem;
+    letter-spacing:normal;
+    display:inline;
+
+    @include max-w($screen-sm) {
+      text-align: left;
+      margin-right: 0!important;
+      display: block!important;
+      line-height: 17px!important;
+    }
+  }
+
+  input[type='text'] {
+
+    @include max-w($screen-sm) {
+      display: block;
+      margin-top: 0!important;
+    }
+  }
+
+  input,
+  textarea {
+    font-size: 1.4rem;
+    font-weight: 300;
+  }
+
+  textarea {
+    line-height: 3rem;
+  }
+}
+
+.form-border-edit{
+    margin-right: 0px !important;
+    margin-left: 0px;
 }

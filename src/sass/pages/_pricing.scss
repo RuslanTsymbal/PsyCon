@@ -139,7 +139,7 @@
       }
     }
 
-     .chat-pricing-cell:nth-last-child(1){
+    .chat-pricing-cell:nth-last-child(1){
 
       @include max-w($screen-md) {
         margin-bottom: 100px;
@@ -160,10 +160,15 @@
 
   .chat-pricing-bot {
 
+    @include max-w(768px) {
+      padding-top: 10px;
+    }
+
+
       .chat-pricing-cell {
 
         @include max-w($screen-md) {
-          margin-bottom: 70px;
+          margin-bottom: 20px;
         }
 
         @include max-w($screen-sm) {
@@ -172,6 +177,7 @@
 
         @include max-w(375px) {
           width: 100%;
+          margin-bottom: 80px;
         }
 
         .chat-pricing-cell__min {
@@ -489,6 +495,10 @@
 
     .chat-pricing-cell {
 
+      @include max-w(768px) {
+        margin-bottom: 20px;
+      }
+
       @include max-w(480px) {
         width: 200px;
       }
@@ -512,6 +522,7 @@
         }
       }
 
+
      .chat-pricing-cell__content span:nth-child(1):before  {
 
         @include max-w(480px) {
@@ -525,6 +536,20 @@
         @include max-w(320px) {
           left: 72px;
         }
+      }
+    }
+
+    .chat-pricing-cell:nth-child(1) {
+
+      @include max-w(480px) {
+        margin-bottom: 80px;
+      }
+    }
+
+    .chat-pricing-cell:nth-child(2) {
+
+      @include max-w(480px) {
+        margin-bottom: 80px;
       }
     }
 
@@ -557,7 +582,13 @@
       background-repeat: no-repeat;
       border-radius: 4px;
     }
+
+    .selecter {
+      max-width: 100%;
+    }
+
+    .selecter-selected {
+      width: 100%;
+    }
   }
 }
-
-

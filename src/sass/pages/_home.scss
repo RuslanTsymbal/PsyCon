@@ -1,6 +1,5 @@
 /*---------------------slick-slider (slider-top)--------------------------*/
 
-
 .slick-dots {
   bottom: -40px;
 
@@ -174,7 +173,6 @@
       border: 2px solid #fff;
       opacity: 1;
       border-radius: 14px;
-
       font-size: 56px;
       width: 16px;
       height: 16px;
@@ -315,7 +313,10 @@
 
 
 
+
 /*-------------------content-block__header--------------------*/
+
+
 
 
 .content-block__header {
@@ -471,15 +472,14 @@
     }
   }
 
-
-   .content-block__content {
-      max-width: 74.3%;
-      float: right;
-      padding-right: 3rem;
-      font-size: 1.6rem;
-      font-weight: 300;
-      line-height: 3rem;
-      color: #999999;
+  .content-block__content {
+    max-width: 74.3%;
+    float: right;
+    padding-right: 3rem;
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 3rem;
+    color: #999999;
   }
 }
 
@@ -498,7 +498,7 @@
 .hide-title {
 
   @include max-w($screen-sm) {
-     display: none;
+    display: none;
   }
 }
 
@@ -822,7 +822,7 @@
   margin-left: auto;
   margin-top: 20px;
 
-   @include max-w($screen-md) {
+  @include max-w($screen-md) {
     max-width:100%;
     margin-left: 0;
     margin-top: 20px;
@@ -868,6 +868,7 @@
 
 .articles-blog:nth-child(2),
 .articles-blog:nth-child(4){
+
     @include max-w(768px) {
       float: right;
     }
@@ -876,6 +877,7 @@
       float: none;
     }
  }
+
 
 .articles-blog {
   border-radius: 10px;
@@ -1053,8 +1055,6 @@
     }
   }
 }
-
-
 
 
 

@@ -14,12 +14,23 @@
 
     <section class="page-form">
 
-      <div class="page-form__header">
-        <h2>Email Reading Order Form</h2>
-        <p>Using this form, you will be able to place your order for an Email Reading with us.
-        All the payment information you enter on this form will be encrypted and can
-        only be read by our secure & encrypted payment gateway system.
-        Your privacy is assured.</p>
+      <div class="page-form__header error-block">
+
+        <div class="error-block__wrapper">
+          <div class="error-block__content">
+            <h4>You have some errors:</h4>
+            <ul>
+               <li>- Last Name cannot be blank.</li>
+               <li>- Reading Type cannot be blank.</li>
+               <li>- Reader cannot be blank.</li>
+               <li>- Payment Method cannot be blank.</li>
+            </ul>
+            <div class="error-block__img">
+               <img src="images/error.png" alt="error img">
+            </div>
+          </div>
+        </div>
+
       </div>
 
       <div class="contact-information-block">
@@ -31,8 +42,7 @@
 
         <form id="form-data" name="contact-information" action="#" method="#">
           <div class="form-data__wrapper">
-            <p class="form-data-description hide-if-1024">Please select the type of Reading you would like
-            to have from the following  drop-down  menu.  * </p>
+            <p class="form-data-description hide-if-1024">Please select the type of Reading you would like to have from the following  drop-down  menu.  *</p>
             <span class="warning-text">Fields marked with * are required</span>
             <div class="type-form-field">
               <span class="title-field">Please chosse type from this menu *</span>
@@ -123,7 +133,7 @@
                 <option value="#"></option>
               </select>
 
-              <span class="hide-line">-</span>
+              <span>-</span>
 
               <select name="date-birth-dd">
                 <option value="#"></option>
@@ -133,7 +143,7 @@
                 <option value="#"></option>
               </select>
 
-               <span class="hide-line">-</span>
+               <span>-</span>
 
               <select name="date-birth-yy">
                 <option value="#"></option>
@@ -222,12 +232,12 @@
 
               <div class="indent-delete">
                 <label for="instructions">Special instructions</label>
-                <textarea id="instructions" name="instructions" cols="40" rows="4"></textarea>
+                <textarea id="instructions" name="instructions" cols="40" rows="2"></textarea>
               </div>
 
               <div class="indent-delete">
                 <label for="information-questions">Please enter any additional<br>information / questions here  </label>
-                <textarea id="information-questions" name="information-questions" cols="40" rows="4"></textarea>
+                <textarea id="information-questions" name="information-questions" cols="40" rows="2"></textarea>
               </div>
             </div><!-- .choose-personal -->
 
@@ -331,7 +341,7 @@
 
             <div class="form-data__buttoms more-info__buttons">
               <button type="button">send email reading order </button>
-              <button type="button">clear order form</button>
+              <button type="button">clear order form </button>
             </div>
 
           </div><!-- .form-data__footer-->

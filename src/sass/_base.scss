@@ -44,7 +44,7 @@ section {
 .my-container {
   max-width: 1280px;
   margin: 0 auto;
-  overflow: hidden;
+  @include clearfix;
 }
 
 .wrapper-content {
@@ -111,6 +111,7 @@ section {
 .orange-color {
   color: #ff6600;
 }
+
 .font-s-italic {
   font-style: italic;
 }
@@ -119,17 +120,17 @@ section {
   text-transform: uppercase;
 }
 
+
 .hide-if-768 {
 
   @include max-w(768px) {
-    display: none;
+    display: none!important;
   }
 }
 
 .margin-t-20 {
   margin-top: 20px;
 }
-
 
 
 ul {
@@ -148,4 +149,3 @@ p {
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
-
