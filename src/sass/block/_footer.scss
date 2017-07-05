@@ -104,6 +104,10 @@
         padding-left: 18%;
       }
 
+      @include max-w(360px) {
+        padding-left: 17%;
+      }
+
       @include max-w($screen-xs) {
         padding-left: 12%!important;
       }
@@ -137,7 +141,7 @@
     align-items: flex-start!important;
   }
 
-  @include max-w($screen-xs) {
+  @include max-w(360px) {
     display: none!important;
   }
 
@@ -203,19 +207,19 @@
 
 
 .footer-icons-mobile {
-  display: none;
+  display: none!important;
   padding-top: 16px;
   padding-bottom: 16px;
-  overflow: hidden;
 
-  @include max-w($screen-xs) {
-    display: block;
+  @include max-w(360px) {
+    display: flex!important;
+    justify-content: space-between;
+    flex-direction: row;
+    overflow: hidden;
   }
 
   img {
     display: block;
-    float: left;
-    margin-right: 11px;
   }
 
   img:nth-child(1) {

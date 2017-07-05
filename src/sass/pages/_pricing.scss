@@ -145,17 +145,6 @@
         margin-bottom: 100px;
       }
     }
-
-    .chat-pricing-cell__min {
-
-      @include max-w(375px) {
-        left: 116px;
-      }
-
-      @include max-w(320px) {
-        left: 88px;
-      }
-    }
   }
 
   .chat-pricing-bot {
@@ -178,21 +167,6 @@
         @include max-w(375px) {
           width: 100%;
           margin-bottom: 80px;
-        }
-
-        .chat-pricing-cell__min {
-
-          @include max-w(480px) {
-            left: 59px;
-          }
-
-          @include max-w(375px) {
-            left: 116px;
-          }
-
-          @include max-w(320px) {
-            left: 89px;
-          }
         }
 
         .chat-pricing-cell__content span:nth-child(1):before {
@@ -311,11 +285,9 @@
   text-align: center;
   position: absolute;
   top: -36px;
-  // left: 142px;
-
-  @include max-w(375px) {
-    left: 90px;
-  }
+  left: 0;
+  right: 0;
+  margin: auto;
 
   span {
     display: block;
@@ -418,18 +390,6 @@
       font-weight: 900;
       padding-bottom: 9px;
     }
-
-    // .chat-pricing-cell__min {
-    //   left: 40px;
-
-    //   @include max-w(320px) {
-    //     left: 90px;
-    //   }
-
-    //   @include max-w(375px) {
-    //     left: 90px;
-    //   }
-    // }
   }
 }
 
@@ -507,22 +467,6 @@
         width: 100%;
       }
 
-      .chat-pricing-cell__min {
-
-        @include max-w(480px) {
-          left: 59px;
-        }
-
-        @include max-w(375px) {
-          left: 116px;
-        }
-
-        @include max-w(320px) {
-          left: 89px;
-        }
-      }
-
-
      .chat-pricing-cell__content span:nth-child(1):before  {
 
         @include max-w(480px) {
@@ -577,7 +521,7 @@
       padding-top: 8px;
       padding-bottom: 8px;
       appearance: none!important;
-      background-image: url('../../images/arrow.png');
+      background-image: url('../images/arrow.png');
       background-position: right 8px center;
       background-repeat: no-repeat;
       border-radius: 4px;

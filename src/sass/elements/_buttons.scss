@@ -4,6 +4,7 @@
   width: 129px;
   padding-top: 5.5px;
   padding-bottom: 2.5px;
+  padding-right: 0;
   color: #fff;
   font-size: 1.4rem;
   font-weight: bold;
@@ -18,20 +19,19 @@
 .btn-sign {
   background-color: $button-sign-color;
   border-bottom: 3px solid #038740;
+  height: 41px;
+  padding-top: 3px;
+  padding-bottom: 0;
+  padding-left: 0;
+  vertical-align: middle;
+  text-align: center;
 
   @include max-w(1440px) {
     width: 100px;
   }
 
-  @include max-w(1368px) {
-    padding-top: 3px;
-    padding-bottom: 3px;
-  }
-
   @include max-w(1280px) {
     width: 90px;
-    padding-top: 1px;
-    padding-bottom: 1px;
   }
 
   @include max-w($screen-xl) {
@@ -45,21 +45,20 @@
 
 .btn-login {
   background-color: $button-login-color;
-  border-bottom: 2px solid #bc5d00;
+  border-bottom: 3px solid #bc5d00;
+  height: 41px;
+  padding-top: 3px;
+  padding-bottom: 0;
+  padding-left: 0;
+  vertical-align: middle;
+  text-align: center;
 
   @include max-w(1440px) {
     width: 100px;
   }
 
-  @include max-w(1368px) {
-    padding-top: 3px;
-    padding-bottom: 3px;
-  }
-
   @include max-w(1280px) {
     width: 90px;
-    padding-top: 1px;
-    padding-bottom: 1px;
   }
 }
 
@@ -80,6 +79,7 @@
   border-radius: 3px;
   text-transform: uppercase;
   font-size: 11px;
+  vertical-align: middle;
 }
 
 
@@ -90,11 +90,13 @@
   border-bottom: 3px solid #b7b7b7;
   padding-left: 20px;
   padding-right: 10px;
-  padding-top: 3px;
   height: 30px;
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
+  text-align: left;
+  vertical-align: middle;
+  background-image: url(../images/envelope.png);
+  background-repeat: no-repeat;
+  background-position: center right 10px;
+  transition: 0.5s;
 
   i {
     font-size: 18px;
@@ -106,14 +108,19 @@
   }
 }
 
+.btn-offline:hover {
+  background-color: #bababa;
+  border-bottom: 3px solid #a5a5a5;
+}
+
 
 //btn-session
 
 .btn-session {
   background-color: #0058e9;
   border-bottom: 3px solid #003493;
-  padding-top: 3px;
   height: 30px;
+  cursor: default;
 }
 
 //btn-chat
@@ -121,8 +128,8 @@
 .btn-chat {
   background-color: #0acf66;
   border-bottom: 3px solid #05a450;
-  padding-top: 3px;
   height: 30px;
+  cursor: default;
 }
 
 //btn-show
@@ -282,10 +289,11 @@
 .slider-check {
 
   button {
+    margin: 0 auto;
 
      @include max-w($screen-md) {
-      width: 129px;
-      height: 40px;
+      width: 128px;
+      height: 41px;
     }
   }
 }
@@ -300,6 +308,7 @@
   border-bottom: 3px solid #c51500;
   transition: 0.5s;
   padding-top: 3px;
+  padding-bottom: 0;
   height: 30px;
 }
 
@@ -320,9 +329,11 @@ button:focus {
   width: 100%;
   border-radius: 3px;
   background-color: #0acf66;
-  border-bottom: 2px solid #05a450;
+  border-bottom: 3px solid #05a450!important;
   transition: 0.5s;
   padding-top: 3px;
+  padding-bottom: 0;
+  border-bottom: 0;
   height: 30px;
 }
 
@@ -331,25 +342,35 @@ button:focus {
 }
 
 
+
 //profile-btn-offline
 .profile-btn-offline {
   width: 100%;
   border-radius: 3px;
   background-color: #cecece;
-  border-bottom: 2px solid #b7b7b7;
+  border-bottom: 3px solid #b7b7b7;
   transition: 0.5s;
   padding-top: 3px;
+  padding-bottom: 0;
   padding-right: 10px;
-  padding-left: 10px;
+  padding-left: 8px;
   height: 30px;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   position: relative;
+  background-image: url(../images/envelope.png);
+  background-repeat: no-repeat;
+  background-position: center right 10px;
 
   i:nth-child(1) {
+    margin-left: 19px;
     font-size: 11px;
     text-transform: none;
     font-style: normal;
+
+    @include max-w(320px) {
+      display: none;
+    }
   }
 
   i:nth-child(1):before {
@@ -360,10 +381,6 @@ button:focus {
     top: 3px;
     left: 60px;
     border-right: 2px solid #b6b6b6;
-  }
-
-  i:nth-child(2) {
-    font-size: 18px;
   }
 }
 
@@ -391,20 +408,22 @@ button:focus {
   button {
     padding-left: 0;
     padding-right: 0;
-    padding-top: 5px;
-    padding-bottom: 4px;
+    padding-top: 3px;
+    height: 41px;
+    vertical-align: middle;
+    padding-bottom: 0px;
     border: none;
     border-radius: 3px;
     color: #fff;
     text-transform: uppercase;
-    border-bottom: 2px solid #b7b7b7;
+    border-bottom: 3px solid #b7b7b7;
     background-color: #cecece;
     transition: 0.5s;
   }
 
   button:hover {
     background-color: #ffaa31;
-    border-bottom: 2px solid #cd6600;
+    border-bottom: 3px solid #cd6600;
   }
 
   button:nth-child(1) {
@@ -416,7 +435,7 @@ button:focus {
     }
   }
 
-   button:nth-child(2) {
+  button:nth-child(2) {
     width: 229px;
 
     @include max-w($screen-sm) {
@@ -436,16 +455,18 @@ button:focus {
 
 
 .profile-btn-login {
-  width: 128px;
-  margin: 0 auto;
-  padding-top: 6px;
-  padding-bottom: 6px;
+  width: 129px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 8px;
+  padding-top: 7px;
+  padding-bottom: 4px;
   display: block;
   border: none;
   color: #fff;
   border-radius: 3px;
   background-color: #0acf66;
-  border-bottom: 2px solid #05a450;
+  border-bottom: 3px solid #05a450;
   text-transform: uppercase;
   font-size: 14px;
   font-weight: bold;
