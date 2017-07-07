@@ -16,8 +16,8 @@
   transition: 0.5s;
 }
 
-.btn-sign {
-  background-color: $button-sign-color;
+.btn-sign-up {
+  background-color: $button-sign-up-color;
   border-bottom: 3px solid #038740;
   height: 41px;
   padding-top: 3px;
@@ -25,41 +25,21 @@
   padding-left: 0;
   vertical-align: middle;
   text-align: center;
-
-  @include max-w(1440px) {
-    width: 100px;
-  }
-
-  @include max-w(1280px) {
-    width: 90px;
-  }
-
-  @include max-w($screen-xl) {
-     margin-right: 14px;
-  }
 }
 
-.btn-sign:hover {
-  background-color: $button-sign-color--hover;
+.btn-sign-up:hover {
+  background-color: $button-sign-up-color--hover;
 }
 
 .btn-login {
   background-color: $button-login-color;
-  border-bottom: 3px solid #bc5d00;
+  border-bottom: 3px solid #0065af;
   height: 41px;
   padding-top: 3px;
   padding-bottom: 0;
   padding-left: 0;
   vertical-align: middle;
   text-align: center;
-
-  @include max-w(1440px) {
-    width: 100px;
-  }
-
-  @include max-w(1280px) {
-    width: 90px;
-  }
 }
 
 .btn-login:hover {
@@ -270,12 +250,15 @@
 .btn-search {
   border: none;
   color: #cc6600;
-  background: none;
+  background-color: white;
   transition: 0.5s;
-}
+  padding-top: 4.5px;
+  padding-bottom: 4.5px;
+  border-radius: 0 3px 3px 0;
 
-.btn-search:hover {
-  color: #fff;
+  i {
+    font-size: 19px;
+  }
 }
 
 .btn-search:focus {

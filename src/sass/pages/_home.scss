@@ -733,6 +733,14 @@
     img {
       display: block;
       margin-bottom: 9px;
+
+      @include max-w(360px) {
+        margin-bottom: 28px;
+      }
+
+      @include max-w(320px) {
+        margin-bottom: 9px;
+      }
     }
   }
 
@@ -832,6 +840,7 @@
 
   .articles-blog {
     margin-bottom: 20px;
+    background-color: #fff;
 
     @include max-w($screen-sm) {
       max-width: 100%;
@@ -940,6 +949,7 @@
 
     img {
       border-radius: 0 0 10px 10px;
+      width: 100%;
     }
   }
 

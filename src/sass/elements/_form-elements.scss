@@ -22,11 +22,10 @@ select {
 }
 
 input[type='search'] {
-  max-width: 200px;
-  background: none;
+  // max-width: 200px;
+  background-color: white;
   outline: 0 none;
   border: none;
-  padding-bottom: 6px;
   float: left;
   font-family: $font-family-AvenirLT-900;
   color: #cc6600;

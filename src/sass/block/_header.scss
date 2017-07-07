@@ -1,13 +1,5 @@
 .page-header {
 
-  @include max-w(1366px) {
-    padding-top: 20px;
-  }
-
-  @include max-w(1280px) {
-    padding-top: 0;
-  }
-
   @include max-w(768px) {
     padding-right: 0;
     padding-left: 0;
@@ -20,15 +12,15 @@
     float: left;
 
     @include max-w(1680px) {
-      max-width: 360px;
+      max-width: 300px;
     }
 
     @include max-w(1600px) {
-      max-width: 320px;
+      max-width: 284px;
     }
 
     @include max-w(1440px) {
-      max-width: 280px;
+      max-width: 270px;
     }
 
     @include max-w(1368px) {
@@ -54,11 +46,12 @@
     overflow: hidden;
 
     @include max-w(1680px) {
-      margin-left: 48px;
+      margin-left: 36px;
     }
 
     @include max-w(1600px) {
       margin-left: 20px;
+      margin-right: 15px;
     }
 
     @include max-w(1440px) {
@@ -133,29 +126,33 @@
   }
 
   &__authorization {
-    max-width: 772px;
+    max-width: 809px;
     padding-top: 40px;
     overflow: hidden;
     display: flex;
     justify-content: space-between;
-    float: right;
+    padding-right: 5px;
+    margin-right: -5px;
+    margin-left: auto;
 
     @include max-w(1280px) {
-      max-width: 619px;
+      max-width: 640px;
       padding-top: 34px;
     }
 
     @include max-w($screen-xl) {
       width: 404px;
       display: block;
+      padding-right: 0;
       padding-top: 24px;
     }
 
     form {
-      margin-left: 50px;
-      margin-right: 36px;
-      padding-top: 8px;
-      border-bottom: 1px solid #cc6600;
+      width: 268px;
+      margin-right: -12px;
+      border: 1px solid #cc6600;
+      border-radius: 3px;
+      background-color: #fff;
 
       @include max-w(1600px) {
         margin-left: 22px;
@@ -163,13 +160,15 @@
       }
 
       @include max-w(1440px) {
-        margin-left: 36px;
-        margin-right: 22px;
+        width: 253px;
+        margin-left: 20px;
+        margin-right: 10px;
       }
 
       @include max-w(1280px) {
-        margin-left: 26px;
-        margin-right: 18px;
+        width: 200px;
+        margin-left: 12px;
+        margin-right: 10px;
       }
 
       @include max-w($screen-xl) {
@@ -177,6 +176,30 @@
         overflow: hidden;
         margin-left: 7px;
         margin-right: 0;
+      }
+
+      input[type='search'] {
+        width: 225px;
+        padding-top: 7px;
+        padding-left: 10px;
+        padding-bottom: 7px;
+        border-radius: 3px 0 0 3px;
+
+        @include max-w(1600px) {
+          width: 216px;
+        }
+
+         @include max-w(1440px) {
+          width: 166px;
+        }
+
+        @include max-w(1280px) {
+          width: 150px;
+        }
+
+        @include max-w(1024px) {
+          width: 131px;
+        }
       }
     }
 
@@ -192,7 +215,7 @@
     align-items: baseline;
 
     @include max-w(1440px) {
-      width: 216px;
+      width: 245px;
     }
 
     @include max-w(1368px) {
@@ -201,7 +224,6 @@
 
     @include max-w(1280px) {
       max-width: 198px;
-      padding-top: 7px;
     }
 
     @include max-w($screen-xl) {
@@ -209,11 +231,23 @@
       margin-right: 18px;
       margin-left: 0;
     }
+
+    .btn-sign-up,
+    .btn-login {
+
+      @include max-w(1440px) {
+        width: 90px;
+      }
+
+    }
+
+    @include max-w($screen-xl) {
+      margin-right: 14px;
+    }
   }
 
   &__social {
-    width: 196px;
-    padding-top: 10px;
+    width: 210px;
 
     @include max-w($screen-xl) {
       overflow: hidden;
@@ -222,27 +256,32 @@
     }
 
     ul {
+      height: 41px;
       display: flex;
       justify-content: space-between;
+      align-items: center;
 
       li {
-        display: inline-block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 26px;
+        height: 26px;
+        text-align: center;
+        border-radius: 14px;
+        cursor: pointer;
 
         a {
           color: #ffffff;
           font-size: 1rem;
-          font-size: 1.7rem;
+          font-size: 1.5rem;
           transition: 0.5s;
         }
       }
-    }
 
-    a:nth-child(1) {
-      margin-left: 0;
-    }
-
-    a:hover {
-      color: #cd6600;
+      li:hover {
+         box-shadow: 2px 3px 11px -3px #000000;
+      }
     }
   }
 
@@ -275,7 +314,49 @@
 }
 
 
+//social icons
 
+.instagram-icon {
+  background-image: url(../images/instagram-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 100%;
+}
+
+.twitter-icon {
+  background-image: url(../images/twitter-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 100%;
+}
+
+.google-plus-icon {
+  background-image: url(../images/google-plus-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 100%;
+}
+
+.behance-icon {
+  background-image: url(../images/behance-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 100%;
+}
+
+.facebook-icon {
+  background-image: url(../images/facebook-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 100%;
+}
+
+.pinterest-p-icon {
+  background-image: url(../images/pinterest-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 100%;
+}
 
 /*----------------------------.burger-menu-bot---------------------*/
 
@@ -303,15 +384,20 @@
     ul {
       display: flex;
       justify-content: space-between;
+      align-items: flex-start;
 
       li {
-        display: inline-block;
         padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 26px;
+        height: 26px;
 
         a {
           color: #ffffff;
           font-size: 1rem;
-          font-size: 2.1rem;
+          font-size: 1.5rem;
           transition: 0.5s;
 
           @include max-w($screen-sm) {

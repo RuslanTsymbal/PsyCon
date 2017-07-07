@@ -10,11 +10,11 @@ $link-color: #55b3f3;
 $link-color--hover: darken($link-color, 20%);
 
 //Цвет кнопок
-$button-sign-color: #0acf66;
-$button-login-color: #ffaa31;
+$button-sign-up-color: #0acf66;
+$button-login-color: #0095ff;
 //Цвет кнопок hover
-$button-sign-color--hover: #07b85b;
-$button-login-color--hover: #ff9400;
+$button-sign-up-color--hover: #07b85b;
+$button-login-color--hover: #0080db;
 
 //  Типографика
 
@@ -29,7 +29,7 @@ $line-height: 3rem;
 // Ширина контейнера
 
 $container-padding: 15px;
-$container-width: 1830px;
+$container-width: 1850px;
 
 //  Адаптивность и соответствующие ширины контейнера
 

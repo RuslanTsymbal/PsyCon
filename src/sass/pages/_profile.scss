@@ -442,16 +442,6 @@
     span {
       color: #666666;
       font-style: normal;
-
-      a {
-        display: inline;
-        color: #666666;
-        transition: 0.5s;
-      }
-
-      a:hover {
-         color: #ff6600;
-      }
     }
 
     span:nth-child(1) {
@@ -465,6 +455,7 @@
       color: #666666;
       display: block;
       width: 250px;
+      text-decoration: underline;
 
       @include max-w(375px) {
         margin-top: -6px;
@@ -474,6 +465,7 @@
 
     a:hover {
       color: #ff6600;
+      text-decoration: none;
     }
   }
 
@@ -485,14 +477,6 @@
 
       @include max-w(375px) {
         padding-bottom: 18px;
-      }
-
-      a {
-        transition: 0.5s;
-      }
-
-      a:hover {
-        color: #ff6600;
       }
     }
 
@@ -531,11 +515,12 @@
     }
 
     a {
-      color: #ff6600;
+      text-decoration: underline;
     }
 
     a:hover {
-      color: red;
+      color: #ff6600;
+      text-decoration: none;
     }
   }
 }

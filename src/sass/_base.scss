@@ -72,10 +72,6 @@ section {
   background-size: cover;
   background-position: 50% 100%;
   padding-bottom: 5rem;
-
-   @include max-w($screen-md) {
-    padding-bottom: 5rem;
-  }
 }
 
 .icon {
@@ -87,9 +83,9 @@ section {
 }
 
 .clear:after {
-    content: "";
-    display: table;
-    clear: both;
+  content: "";
+  display: table;
+  clear: both;
 }
 
 .font-w-300 {

@@ -39,6 +39,7 @@
   @include max-w($screen-xl) {
     order: 2;
     width: 100%;
+    margin-top: 20px;
   }
 
   &__header {
@@ -515,6 +516,10 @@
   .pricing__footer {
     padding-top: 34px;
     padding-bottom: 64px;
+
+    @include max-w(375px) {
+       padding-bottom: 30px;
+    }
 
     select {
       margin: 0;

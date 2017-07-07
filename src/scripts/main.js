@@ -96,6 +96,8 @@ $(document).ready(function() {
     }
   });
 
-   //Plugin jquery "Select"
-   $("select" ).selecter();
+  //Plugin jquery "Select"
+  $("select" ).selecter();
+
 });
+
