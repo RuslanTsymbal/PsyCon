@@ -1,6 +1,6 @@
 // Кнопки
 
-.btn {
+.my-btn {
   width: 129px;
   padding-top: 5.5px;
   padding-bottom: 2.5px;
@@ -16,12 +16,15 @@
   transition: 0.5s;
 }
 
+.my-btn:hover {
+  color: #fff;
+}
+
 .btn-sign-up {
   background-color: $button-sign-up-color;
   border-bottom: 3px solid #038740;
-  height: 41px;
-  padding-top: 3px;
-  padding-bottom: 0;
+  padding-top: 6px;
+  padding-bottom: 2px;
   padding-left: 0;
   vertical-align: middle;
   text-align: center;
@@ -34,9 +37,8 @@
 .btn-login {
   background-color: $button-login-color;
   border-bottom: 3px solid #0065af;
-  height: 41px;
-  padding-top: 3px;
-  padding-bottom: 0;
+  padding-top: 6px;
+  padding-bottom: 2px;
   padding-left: 0;
   vertical-align: middle;
   text-align: center;
@@ -133,9 +135,10 @@
   background-color: #ff9400;
 }
 
-.btn:focus {
+.my-btn:focus {
   outline: none;
 }
+
 
 
 //burger-menu
@@ -388,7 +391,8 @@ button:focus {
 
 .more-info__buttons {
 
-  button {
+  button,
+  input {
     padding-left: 0;
     padding-right: 0;
     padding-top: 3px;
@@ -404,12 +408,14 @@ button:focus {
     transition: 0.5s;
   }
 
-  button:hover {
+  button:hover,
+  input:hover {
     background-color: #ffaa31;
     border-bottom: 3px solid #cd6600;
   }
 
-  button:nth-child(1) {
+  button:nth-child(1),
+  input[type='submit'] {
     width: 184px;
 
     @include max-w($screen-sm) {

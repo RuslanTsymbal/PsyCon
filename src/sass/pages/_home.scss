@@ -1,5 +1,15 @@
 /*---------------------slick-slider (slider-top)--------------------------*/
 
+.fade {
+  opacity: 1;
+  outline: none;
+}
+
+.fade:focus,
+.fade:active {
+  border: none;
+}
+
 .slick-dots {
   bottom: -40px;
 
@@ -663,6 +673,16 @@
 
   a:hover {
     color: #0acf66;
+  }
+
+  .my-btn {
+    display: block;
+    text-decoration: none;
+    margin: 0 auto;
+  }
+
+  .my-btn:hover {
+    color: #ffffff;
   }
 }
 

@@ -1178,9 +1178,11 @@
     display: block!important;
   }
 
-  button:nth-child(1) {
+  input {
     width: 246px!important;
     height: 44px;
+    padding-top: 1px;
+    font-weight: 300;
 
     @include max-w(375px) {
       width: 100%!important;
@@ -1189,6 +1191,7 @@
 
   button:nth-child(2) {
     width: 182px!important;
+    padding-top: 3px;
     height: 44px;
 
     @include max-w(375px) {

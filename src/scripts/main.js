@@ -96,6 +96,10 @@ $(document).ready(function() {
     }
   });
 
-  //Plugin jquery "Select"
-  // $("select" ).selecter();
+  //active menu item
+  $(".nav-point").click(function(e) {
+    e.preventDefault();
+    $(".nav-point").removeClass('nav-point-active');
+    $(this).addClass('nav-point-active');
+  })
 });

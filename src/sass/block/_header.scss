@@ -1,4 +1,8 @@
 .page-header {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border: none;
 
   @include max-w(768px) {
     padding-right: 0;
@@ -43,7 +47,6 @@
     margin-left: 64px;
     font-size: 2.2rem;
     color: #9a3000;
-    overflow: hidden;
 
     @include max-w(1680px) {
       margin-left: 36px;
@@ -216,7 +219,7 @@
     width: 278px;
     justify-content: space-between;
     display: flex;
-    align-items: baseline;
+    align-items: flex-start;
 
     @include max-w(1440px) {
       width: 245px;
@@ -292,6 +295,7 @@
   }
 
   &__top {
+    @include clearfix;
 
     padding-left: 15px;
     padding-right: 15px;
@@ -377,7 +381,7 @@
     padding-bottom: 648px;
   }
 
-   @include max-w(375px) {
+  @include max-w(375px) {
     padding-bottom: 0;
   }
 
@@ -386,6 +390,11 @@
     padding-left: 15px;
     padding-right: 15px;
     padding-bottom: 40px;
+
+    @include max-w(480px) {
+      padding-left: 5px;
+      padding-right: 5px;
+    }
 
     ul {
       display: flex;
@@ -426,11 +435,11 @@
   &__btn {
     width: 100%;
     float: right;
-    padding-top: 13px;
-    padding-bottom: 13px;
-    padding-right: 9px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-right: 16px;
 
-    button {
+    a {
       display: inline-block;
       border: none;
       background: none;
@@ -456,6 +465,8 @@
     }
 
     span {
+      margin-left: 5px;
+      margin-right: 5px;
       float: right;
       color: #fff;
     }
@@ -513,7 +524,7 @@
 
 
 .page-header__bot {
-  margin-top: 25px;
+  margin-top: 5px;
 }
 
 
@@ -563,14 +574,14 @@
 
     li {
       display: inline-block;
-      padding-top: 18px;
-      padding-bottom: 18px;
+      padding-top: 26px;
+      padding-bottom: 26px;
       padding-left: 27px;
       padding-right: 28px;
       font-family: $font-family-AvenirLT-900;
       font-size: 1.2rem;
       font-weight: bold;
-      line-height: 2.5rem;
+      line-height: 1rem;
       text-transform: uppercase;
       transition: 0.5s;
       cursor: pointer;
@@ -623,5 +634,26 @@
     @include max-w(375px) {
       padding-top: 78px;
     }
+  }
+}
+
+.nav-point-active {
+  background-color: #ff9834;
+}
+
+
+//css - Safari
+@media screen and (-webkit-min-device-pixel-ratio:0){
+
+  .page-header__authorization:not(:root:root) {
+    @include max-w(1366px) {
+      width: 620px;
+    }
+  }
+
+  .btn-sidebar,
+  .btn-offline,
+  .btn-session {
+    padding-top: 6px;
   }
 }
