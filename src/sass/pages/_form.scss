@@ -227,7 +227,7 @@
       }
     }
 
-    .selecter-selected {
+    select {
 
       @include max-w(320px) {
         width: 278px;
@@ -334,28 +334,28 @@
     }
   }
 
-  span.selecter-selected {
+  // span.selecter-selected {
 
-    @include max-w(375px) {
-      color: #fff;
-    }
+  //   @include max-w(375px) {
+  //     color: #fff;
+  //   }
 
-    @include max-w(360px) {
-      width: 318px;
-    }
+  //   @include max-w(360px) {
+  //     width: 318px;
+  //   }
 
-    @include max-w(320px) {
-      width: 278px;
-    }
-  }
+  //   @include max-w(320px) {
+  //     width: 278px;
+  //   }
+  // }
 
-  span.selecter-selected:hover {
-    color: #999;
+  // span.selecter-selected:hover {
+  //   color: #999;
 
-    @include max-w(375px) {
-      color: #fff;
-    }
-  }
+  //   @include max-w(375px) {
+  //     color: #fff;
+  //   }
+  // }
 }
 
 .first-name-field {
@@ -565,7 +565,7 @@
 
   .hide-line {
 
-    @include max-w(375px) {
+    @include max-w(768px) {
       display: none!important;
     }
   }
@@ -583,16 +583,6 @@
 
     @include max-w(375px) {
       width: 100%;
-    }
-
-    .selecter {
-      margin-left: 0;
-      padding-top: 0;
-      height: 41px;
-
-      .selecter-selected {
-        margin-left: 0;
-      }
     }
 
     span {
@@ -622,43 +612,51 @@
     }
   }
 
-  .selecter {
-    max-width: 98px!important;
-
-    .selecter-selected {
-      max-width: 98px!important;
-      height: 41px;
-      padding-left: 5px;
-
-      @include max-w(375px) {
-        max-width: 81px!important;
-        height: 31px;
-      }
-    }
-
-    .selecter-options {
-
-      span {
-        margin-left: 0;
-      }
-    }
-
-    select {
-      padding-top: 5px;
-      padding-bottom: 5px;
-    }
-  }
-
   label {
     position: relative;
   }
 
   select {
+    max-width: 98px!important;
     padding-right: 2px;
     padding-left: 5px;
+
+    @include max-w(375px) {
+      max-width: 81px!important;
+    }
   }
 }
 
+
+.billing-state {
+  display: flex;
+  justify-content: flex-end;
+
+  @include max-w(375px) {
+    display: block;
+  }
+
+  span {
+    @include max-w(375px) {
+      width: 100%;
+    }
+  }
+}
+
+.billing-country {
+   display: flex;
+  justify-content: flex-end;
+
+  @include max-w(375px) {
+    display: block;
+  }
+
+  span {
+    @include max-w(375px) {
+      width: 100%;
+    }
+  }
+}
 
 .time-born-field {
   padding-bottom: 17px;
@@ -925,27 +923,6 @@
       }
     }
 
-    .title-field {
-      float: left;
-      padding-left: 32.2%;
-
-      @include max-w($screen-xl) {
-        padding-left: 25.4%;
-      }
-
-      @include max-w($screen-md) {
-        padding-left: 13.4%;
-      }
-
-      @include max-w(751px) {
-        padding-left: 10%;
-      }
-
-      @include max-w($screen-sm) {
-        padding-left: 0;
-      }
-    }
-
     .selecter-options {
 
       .selecter-item:nth-child(1) {
@@ -1070,9 +1047,7 @@
       width: 100%;
     }
 
-    select,
-    .selecter,
-    .selecter-selected {
+    select {
       max-width: 184px;
       margin-left: 0;
 
@@ -1143,6 +1118,19 @@
          @include max-w(375px) {
           line-height: 17px;
           font-size: 14px;
+        }
+      }
+    }
+
+    p:nth-child(1) {
+
+      @include max-w(320px) {
+        white-space: pre-line;
+      }
+
+      br {
+         @include max-w(320px) {
+          display: none;
         }
       }
     }

@@ -129,7 +129,6 @@
         padding-bottom: 0;
       }
     }
-
   }
 
   &__element:nth-child(3) {
@@ -142,6 +141,7 @@
     }
   }
 }
+
 
 .elements-wrapper {
   border-right: 1px solid #cdcdcd;
@@ -414,7 +414,6 @@
       @include max-w($screen-xs) {
         padding-bottom: 1.3rem;
       }
-
     }
 
     p:nth-child(3) {
@@ -516,6 +515,7 @@
 
     a {
       text-decoration: underline;
+      color: #999999;
     }
 
     a:hover {

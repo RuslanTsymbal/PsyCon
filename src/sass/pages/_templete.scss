@@ -18,11 +18,7 @@
   }
 
   .content-block {
-    float: none;
-
-    @media screen and (max-width: 1280px) {
-      max-width: 835px;
-    }
+    max-width: 100%;
 
     @include max-w(768px) {
       margin-top: 0;
@@ -41,23 +37,14 @@
 }
 
 .templete-block {
-  width: 830px;
+  width: 100%;
   padding-left: 15px;
   padding-right: 15px;
   padding-top: 40px;
   background-color: #fff;
   border: 1px solid #cccccc;
 
-  @include max-w(1280px) {
-    width:812px;
-  }
-
-  @include max-w(1024px) {
-    width: 578px;
-  }
-
   @include max-w(768px) {
-    width: 100%;
     margin-bottom: 30px;
   }
 
@@ -116,9 +103,8 @@
     flex-wrap: wrap;
     padding-bottom: 17px;
 
-    @media screen and (max-width: 1280px) {
-      align-items: center;
-      flex-direction: column;
+    @media screen and (max-width: 1024px) {
+      justify-content: space-around;
     }
   }
 }
@@ -149,7 +135,7 @@
       }
 
       a {
-        padding: 2px 13.9px 2px 13.9px;
+        padding: 3px 13.9px 1px 13.9px;
         display: block;
         border-radius: 3px;
         background-color: #cdcdcd;
@@ -173,7 +159,7 @@
   }
 
   .pagination-previous {
-    margin-right: 10px;
+    margin-right: 15px;
 
     @include max-w(360px) {
       margin-right: 0;

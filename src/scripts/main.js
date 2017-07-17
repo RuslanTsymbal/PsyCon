@@ -97,7 +97,5 @@ $(document).ready(function() {
   });
 
   //Plugin jquery "Select"
-  $("select" ).selecter();
-
+  // $("select" ).selecter();
 });
-
