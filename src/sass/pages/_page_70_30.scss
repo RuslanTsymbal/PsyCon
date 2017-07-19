@@ -1,0 +1,45 @@
+.page-70-30 {
+  padding-top: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  @include max-w(1280px) {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  @include max-w(768px) {
+    display: block;
+  }
+}
+
+.content-block-70 {
+  width: 69%;
+  padding: 15px;
+  background-color: #fff;
+  border: 1px solid #cdcdcd;
+  border-radius: 9px;
+
+  @include max-w(768px) {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+
+.content-block-30 {
+  width: 29%;
+  padding: 15px;
+  background-color: #fff;
+  border: 1px solid #cdcdcd;
+  border-radius: 9px;
+
+  @include max-w(768px) {
+    width: 100%;
+  }
+}
+
+.my-container.page-70-30:after {
+  display: none;
+}

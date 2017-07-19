@@ -97,9 +97,27 @@ $(document).ready(function() {
   });
 
   //active menu item
-  $(".nav-point").click(function(e) {
-    e.preventDefault();
-    $(".nav-point").removeClass('nav-point-active');
-    $(this).addClass('nav-point-active');
-  })
+  $(function () {
+    var location = window.location.href;
+    var cur_url = '/' + location.split('/').pop();
+
+    $('.nav-point').each(function () {
+      var link = $(this).find('a').attr('href');
+
+      if (cur_url == link)
+        {
+          $(this).addClass('nav-point-active');
+        }
+    });
+  });
+
+
+  //add attr href
+  $(function () {
+    $('.nav-point a').each(function () {
+      var link = this.href;
+      $(this).attr("href", link);
+    });
+  });
+
 });

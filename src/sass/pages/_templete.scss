@@ -21,7 +21,7 @@
     max-width: 100%;
 
     @include max-w(768px) {
-      margin-top: 0;
+      margin-top: 20px;
     }
   }
 
@@ -184,5 +184,20 @@
         vertical-align: baseline;
       }
     }
+  }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0){
+
+  .btn-sidebar:not(:root:root) {
+    padding-top: 7px;
+  }
+
+  .btn-offline:not(:root:root) {
+    padding-top: 7px;
+  }
+
+  .btn-chat:not(:root:root) {
+    padding-top: 7px;
   }
 }

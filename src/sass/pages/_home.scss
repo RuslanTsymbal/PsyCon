@@ -5,9 +5,8 @@
   outline: none;
 }
 
-.fade:focus,
-.fade:active {
-  border: none;
+.slick-slide {
+   outline: none;
 }
 
 .slick-dots {
@@ -381,7 +380,7 @@
     padding-right: 4.9rem;
     font-size: 1.6rem;
     line-height: 3rem;
-    color: #999999;
+    color: #4c4b4b;
     font-weight: 300;
 
     @include max-w($screen-md) {
@@ -484,13 +483,12 @@
   }
 
   .content-block__content {
-    max-width: 74.3%;
+    width: 74.3%;
     float: right;
     padding-right: 3rem;
     font-size: 1.6rem;
     font-weight: 300;
     line-height: 3rem;
-    color: #999999;
   }
 }
 
@@ -676,6 +674,7 @@
   }
 
   .my-btn {
+    width:129px;
     display: block;
     text-decoration: none;
     margin: 0 auto;
@@ -697,6 +696,7 @@
   margin-left: auto;
 
   @include max-w($screen-md) {
+    padding-top: 30px;
     margin: 0 auto;
     order: 1;
   }
@@ -788,7 +788,6 @@
 
     span:nth-child(2) {
       padding-bottom: 14px;
-      color: #999999;
       font-size: 1.4rem;
       line-height: 1.8rem;
     }
@@ -806,7 +805,7 @@
 
     a {
       display: block;
-      color: #999999;
+      color: #4c4b4b;
       font-size: 1.4rem;
       line-height: 2rem;
       transition: 0.5s;
@@ -950,7 +949,7 @@
         a {
           font-size: 1.6rem;
           font-weight: 300;
-          color: #999999;
+          color: #4c4b4b;
 
           @include max-w(320px) {
             font-size: 1.4rem;
@@ -976,7 +975,6 @@
   &__content {
     padding-left: 20px;
     padding-bottom: 15px;
-    color: #999999;
     font-size: 1.6rem;
     line-height: 3rem;
 
