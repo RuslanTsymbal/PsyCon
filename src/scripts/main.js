@@ -68,7 +68,7 @@ $(document).ready(function() {
     var darkBlock = $("div").is("#overlay");
 
     if(darkBlock) {
-     statusFirst = true;
+      statusFirst = true;
     } else {
       statusFirst = false;
     }
@@ -98,18 +98,18 @@ $(document).ready(function() {
 
 
   //add attr href
-   $(function () {
-     $('.nav-point a').each(function () {
-       var link = this.href;
-       $(this).attr("href", link);
-     });
+  $(function () {
+    $('.nav-point a').each(function () {
+      var link = this.href;
+      $(this).attr("href", link);
+    });
   });
 
 
   //active menu item
   $(function () {
     var location = window.location.href;
-    var cur_url = '/' + location.split('/').pop();
+    // var cur_url = '/' + location.split('/').pop();
 
     $('.nav-point').each(function () {
       var link = $(this).find('a').attr('href');
