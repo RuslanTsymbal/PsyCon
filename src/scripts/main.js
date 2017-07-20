@@ -96,6 +96,16 @@ $(document).ready(function() {
     }
   });
 
+
+  //add attr href
+   $(function () {
+     $('.nav-point a').each(function () {
+       var link = this.href;
+       $(this).attr("href", link);
+     });
+  });
+
+
   //active menu item
   $(function () {
     var location = window.location.href;
@@ -104,19 +114,10 @@ $(document).ready(function() {
     $('.nav-point').each(function () {
       var link = $(this).find('a').attr('href');
 
-      if (cur_url == link)
+      if (location == link)
         {
           $(this).addClass('nav-point-active');
         }
-    });
-  });
-
-
-  //add attr href
-  $(function () {
-    $('.nav-point a').each(function () {
-      var link = this.href;
-      $(this).attr("href", link);
     });
   });
 
