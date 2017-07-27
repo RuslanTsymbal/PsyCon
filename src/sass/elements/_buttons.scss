@@ -404,14 +404,14 @@ button:focus {
     border-radius: 3px;
     color: #fff;
     text-transform: uppercase;
-    border-bottom: 3px solid #b7b7b7;
-    background-color: #cecece;
+    border-bottom: 3px solid #cd6600;
+    background-color: #ffaa31;
     transition: 0.5s;
   }
 
   button:hover,
   input:hover {
-    background-color: #ffaa31;
+    background-color: #ff9400;
     border-bottom: 3px solid #cd6600;
   }
 

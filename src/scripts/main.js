@@ -8,9 +8,10 @@ $(document).ready(function() {
   } else {
     $(".page-header__nav").removeClass("nav-mob");
   }
+  
 
-  //slick-slider
-   $('.fade').slick({
+  //slick-slider 1
+   $('.fade-top').slick({
     dots: true,
     infinite: true,
     speed: 500,
@@ -18,6 +19,16 @@ $(document).ready(function() {
     cssEase: 'linear',
     autoplay: true,
     autoplaySpeed: 5000
+  });
+
+
+  //slick-slider 2
+  $('.fade-bot').slick({
+    dots: true,
+    infinite: true,
+    speed: 500,
+    fade: true,
+    cssEase: 'linear',
   });
 
 

@@ -645,3 +645,54 @@
 .nav-point-active {
   background-color: #ff9834;
 }
+
+
+
+//style for Mozilla
+@-moz-document url-prefix() {
+ 
+  .page-header__authorization form input[type="search"]  {
+    width: 80%;
+  }
+}
+
+
+//style for Internet Explorer IE11 
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+   
+  .page-header__social { 
+    width: 280px;
+
+    @include max-w(1440px) {
+      padding-right: 5px;
+    }
+  }
+
+  .page-header__button {
+    flex-basis: 330px;
+  }
+
+  .page-header__authorization form {
+    flex-basis: 228px;
+
+    @include max-w(1600px) {
+      flex-basis: 215px;
+    }
+
+    @include max-w(1440px) {
+      flex-basis: 199px;
+    }
+
+    @include max-w(1280px) {
+      margin-right: 10px;
+    }
+  }
+
+  .page-header__button {
+
+    @include max-w(1150px) {
+      width: 205px;
+    }
+  }
+}

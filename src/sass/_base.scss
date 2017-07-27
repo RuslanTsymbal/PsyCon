@@ -64,6 +64,7 @@ section {
   @include max-w($screen-md) {
     padding-right: 15px!important;
     padding-left: 15px!important;
+    align-items: center;
   }
 }
 
